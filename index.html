@@ -67,6 +67,8 @@
   .art .badge { position: absolute; left: 50%; top: 38%; transform: translate(-50%,-50%); text-align: center; white-space: nowrap; }
   .art .badge .big { font-family: var(--display); font-stretch: 125%; font-weight: 900; font-size: clamp(44px, 5.6vw, 84px); line-height: .9; color: #1b0b1f; }
   .art .badge .small { font-family: var(--mono); font-size: 13px; font-weight: 600; letter-spacing: 3px; color: #1b0b1f; margin-top: 10px; }
+  .art .duo { position: absolute; left: 50%; bottom: -14%; transform: translateX(-50%); height: 118%; width: auto; max-width: 120%; object-fit: contain; filter: drop-shadow(0 20px 40px rgba(0,0,0,.45)); }
+  .art.has-img .badge { display: none; }
   .palm { position: absolute; bottom: 0; fill: #2a0f30; opacity: .75; z-index: -1; }
   .palm.l { left: -60px; height: 70%; }
   .palm.r { right: -50px; height: 85%; transform: scaleX(-1); }
@@ -189,6 +191,8 @@
     <div class="art" aria-hidden="true">
       <div class="sun"></div>
       <div class="badge"><div class="big">GTA 6</div><div class="small">NATIVE · PC</div></div>
+      <!-- Drop your image at assets/hero.png (transparent PNG works best). Until then the sun badge shows. -->
+      <img class="duo" src="assets/hero.png" alt="" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
     </div>
   </div>
 </header>
