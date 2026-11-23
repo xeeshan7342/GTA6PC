@@ -28,7 +28,7 @@ def footer(depth):
     <div><a href="{up}" class="logo">GTA6<b>PC</b></a><p>GTA 6 PC news, release info and guides · unofficial fan site</p></div>
     <div class="foot-links"><a href="{up}blog/">Blog</a><a href="{up}about/">About</a><a href="{up}contact/">Contact</a><a href="{up}privacy-policy/">Privacy Policy</a></div>
   </div>
-  <p class="legal">{NAME} is an unofficial fan site. It is not affiliated with, endorsed by or sponsored by Rockstar Games or Take-Two Interactive. Grand Theft Auto and related marks are trademarks of Take-Two Interactive Software, Inc. Images credited to Rockstar Games are official screenshots used for news reporting and commentary.</p>
+  <p class="legal">{NAME} is an unofficial fan site. It is not affiliated with, endorsed by or sponsored by Rockstar Games or Take-Two Interactive. Grand Theft Auto and related marks are trademarks of Take-Two Interactive Software, Inc. Artwork credited to Rockstar Games is used for news reporting and commentary.</p>
 </div></footer>'''
 
 def head(title, desc, path, depth, og_image=None, og_type="website", extra_ld=None):
@@ -74,7 +74,7 @@ h1="When is GTA 6 coming to PC?",
 desc="GTA 6 is out on PS5 and Xbox Series X|S, but Rockstar hasn't set a PC date. Here's the reported Q1 2027 window, what Rockstar's history suggests, and what to watch for.",
 kicker="Release date",
 lede="GTA 6 launched on consoles on November 19, 2026. PC players are still waiting, and Rockstar hasn't said for how long. Here's everything that's actually known.",
-img_alt="GTA 6 official screenshot of Vice City at sunset",
+img_alt="GTA 6 PC release date status graphic showing the reported Q1 2027 window",
 tldr="There is <strong>no official GTA 6 PC release date</strong>. Rockstar has only released the game on PS5 and Xbox Series X|S. A GamesBeat report from October 2026 says Rockstar is aiming for <strong>the first quarter of 2027</strong>, but Rockstar hasn't confirmed it.",
 body="""
 <h2>What Rockstar has officially said</h2>
@@ -94,6 +94,7 @@ body="""
 <tr><td>Red Dead Redemption 2</td><td>October 2018</td><td>November 2019</td><td>~13 months</td></tr>
 <tr><td>GTA 6</td><td>November 19, 2026</td><td>Not announced</td><td>Q1 2027 would be ~2–4 months</td></tr>
 </table></div>
+<figure class="hero-img"><img src="../../assets/blog/rockstar-pc-wait-times.jpg" alt="Chart of how long Rockstar PC versions took after console launch: GTA IV about 8 months, GTA V about 19 months, Red Dead Redemption 2 about 13 months" width="1280" height="720" loading="lazy"><figcaption>Graphic: GTA6 PC, based on each game's console and PC release dates</figcaption></figure>
 <p>If the Q1 2027 report is right, this would be the shortest console-to-PC gap Rockstar has ever had. If Rockstar sticks to its usual pattern, late 2027 is more likely.</p>
 
 <h2>Where the announcement will come from</h2>
@@ -125,7 +126,7 @@ h1="GTA 6 PC launch: what to expect",
 desc="What the GTA 6 PC launch will probably look like: which stores, which PC features, what hardware you'll need, and which claims to ignore until Rockstar confirms them.",
 kicker="PC launch",
 lede="Rockstar hasn't announced the PC version yet, but its last two PC launches give a decent idea of how this one will go. Here's what to expect, and what's still unknown.",
-img_alt="GTA 6 official screenshot of Leonida's coastline",
+img_alt="GTA 6 PC launch graphic showing likely stores and PC features",
 tldr="GTA 6 has <strong>no announced PC launch</strong> yet. Based on GTA V and Red Dead Redemption 2, expect it on the <strong>Rockstar Games Launcher, Steam and Epic</strong>, with PC extras like unlocked frame rates and ultrawide support. Official system requirements haven't been published.",
 body="""
 <h2>Where it will probably launch</h2>
@@ -173,7 +174,7 @@ h1="GTA 6 PC leak explained: what's real and what isn't",
 desc="A hacker group says it leaked a near-complete GTA 6 Xbox build. Here's what was released, whether it can run on PC, the fake videos going around, and the malware risk.",
 kicker="Leaks",
 lede="Around the console launch, a group called Cyberleek said it had put a near-complete Xbox build of GTA 6 online. Since then the internet has been full of \"GTA 6 on PC\" claims. Here's what's actually going on.",
-img_alt="GTA 6 official screenshot of a Vice City street at night",
+img_alt="Graphic of the leaked GTA 6 Xbox build with encrypted files and a missing executable",
 tldr="Cyberleek says it released a <strong>~209 GB Xbox build</strong> of GTA 6, labeled version 1.0.2.1, but held back the main executable. The files haven't been fully verified, <strong>no one has shown it running on PC</strong>, and a viral \"PC port\" video turned out to be GTA V footage.",
 body="""
 <h2>What happened</h2>
@@ -222,7 +223,7 @@ h1="Is GTA 6 built for PC? Native, emulated and recompiled explained",
 desc="\"Native PC build\", \"emulated\" and \"recompiled\" mean very different things. Here's what each one means for GTA 6, and which kind of PC version is actually real.",
 kicker="Explainer",
 lede="You'll see a lot of phrases thrown around about GTA 6 on PC: native, built for PC, emulated, recompiled, port. They aren't the same thing. Here's a plain-English breakdown.",
-img_alt="GTA 6 official screenshot of Leonida",
+img_alt="Diagram comparing native PC builds, emulation and static recompilation",
 tldr="The only real <strong>\"built for PC\"</strong> version of GTA 6 will be Rockstar's official one, which hasn't been announced. <strong>Emulation</strong> and <strong>static recompilation</strong> are fan techniques. They have worked for older consoles, but nobody has made them work for GTA 6.",
 body="""
 <h2>1. Native PC build (the official version)</h2>
@@ -273,7 +274,7 @@ h1="Can the leaked GTA 6 Xbox build run on PC?",
 desc="A leaked GTA 6 Xbox build has people asking whether it can run on Windows. Here's why it can't yet, what stands in the way, and why fake download sites are the real danger.",
 kicker="Xbox build",
 lede="The leaked GTA 6 Xbox build has sparked a wave of \"play GTA 6 on PC today\" posts. Here's an honest look at whether that's possible.",
-img_alt="GTA 6 official screenshot of the Leonida Keys",
+img_alt="Graphic listing why the leaked GTA 6 Xbox build cannot run on PC yet",
 tldr="<strong>Not right now.</strong> The leaked Xbox build is reportedly missing its main executable, its files are encrypted, and no Xbox Series X|S emulator exists. Community projects are early, and GTA 6 doesn't boot in any of them.",
 body="""
 <h2>Why people think it might work</h2>
@@ -312,7 +313,7 @@ sources=[
 def img_block(p, depth, cls="hero-img"):
     up = "../" * depth
     return (f'<figure class="{cls}"><img src="{up}assets/blog/{p["slug"]}.jpg" alt="{html.escape(p["img_alt"])}" width="1600" height="900" '
-            f'onerror="this.closest(\'figure\').remove()"><figcaption>Image: Rockstar Games (official screenshot)</figcaption></figure>')
+            f'onerror="this.closest(\'figure\').remove()"><figcaption>{p.get("caption", "Graphic: GTA6 PC")}</figcaption></figure>')
 
 def card(p, depth):
     up = "../" * depth
