@@ -612,5 +612,5 @@ sm_rows += [f"  <url><loc>{SITE}/{u}</loc><lastmod>{TODAY}</lastmod></url>\n" fo
 sm_rows += [f"  <url><loc>{SITE}/blog/{q['slug']}/</loc><lastmod>{TODAY}</lastmod>{_img('assets/blog/' + q['slug'] + '.jpg')}</url>\n" for q in POSTS]
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n' + "".join(sm_rows) + "</urlset>\n"
 write("sitemap.xml", sm)
-write("robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
+write("robots.txt", f"User-agent: *\nAllow: /\nDisallow: /marketing/\nDisallow: /tools/\n\nSitemap: {SITE}/sitemap.xml\n")
 print("ok", len(POSTS), "posts")
