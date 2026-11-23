@@ -238,16 +238,19 @@ body="""
 <p>Static recompilation takes a console game's compiled code and translates it ahead of time into a new program that runs on PC. Fan projects have used this successfully on older games: N64Recomp for Nintendo 64 titles, and XenonRecomp for some Xbox 360 games.</p>
 <p>Modern consoles are much harder. Games are encrypted, depend on console-only system services, and are enormous. A GTA 6 recomp would need a complete, decrypted build plus a huge amount of work. Nobody has publicly shown one working.</p>
 
+<h2>4. Relinking: the AnyPS5 approach</h2>
+<p>A newer open-source project called AnyPS5 takes another route for PS5 games. Because the PS5 uses the same type of processor as a PC, it relinks a game's PS5 program into a PC program, then reimplements the console's system libraries and recompiles its graphics shaders. Some smaller PS5 games already reach gameplay this way. GTA 6 isn't one of them, because it hasn't been dumped from a PS5. Full story: <a href="../anyps5-gta-6-pc/">AnyPS5 and GTA 6</a>.</p>
+
 <h2>Why the Xbox version gets so much attention</h2>
 <p>Modern Xbox games are built with Microsoft's Game Development Kit (GDK), which shares a lot with Windows. Both use x86-64 processors and DirectX 12. That's why people think an Xbox build is easier to bring to PC than a PS5 one. It's still far from simple. See <a href="../gta-6-xbox-build-on-pc/">Can the leaked Xbox build run on PC?</a></p>
 
 <h2>Quick comparison</h2>
 <div class="table-wrap"><table>
-<tr><th></th><th>Native PC</th><th>Emulation</th><th>Recompilation</th></tr>
+<tr><th></th><th>Native PC</th><th>Emulation</th><th>Recompilation / relinking</th></tr>
 <tr><td>Who makes it</td><td>Rockstar</td><td>Fans</td><td>Fans</td></tr>
 <tr><td>Needs game files</td><td>No, you buy it</td><td>Yes, from a console</td><td>Yes, from a console</td></tr>
 <tr><td>Performance</td><td>Best</td><td>Heavy overhead</td><td>Can be good</td></tr>
-<tr><td>Exists for GTA 6</td><td>Not yet (reported Q1 2027)</td><td>No</td><td>No</td></tr>
+<tr><td>Exists for GTA 6</td><td>Not yet (reported Q1 2027)</td><td>No</td><td>No (AnyPS5 exists, GTA 6 not dumped)</td></tr>
 </table></div>
 
 <h2>How to spot a fake "native GTA 6 PC" claim</h2>
@@ -311,17 +314,17 @@ sources=[
 ]
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from posts2 import POSTS2
+from posts2 import POSTS2, NEW
 RELATED = {
     "gta-6-pc-release-date": ["gta-6-pc-vs-console", "rockstar-pc-ports-history", "gta-6-pc-price"],
     "gta-6-pc-launch": ["gta-6-pc-system-requirements", "gta-6-pc-price", "gta-6-pc-mods-fivem"],
     "gta-6-pc-leak": ["gta-6-pc-download-scams", "gta-6-xbox-build-on-pc", "gta-6-built-for-pc"],
-    "gta-6-built-for-pc": ["gta-6-xbox-build-on-pc", "gta-6-pc-leak", "gta-6-pc-system-requirements"],
+    "gta-6-built-for-pc": ["anyps5-gta-6-pc", "gta-6-xbox-build-on-pc", "gta-6-pc-leak"],
     "gta-6-xbox-build-on-pc": ["gta-6-pc-download-scams", "gta-6-pc-leak", "gta-6-built-for-pc"],
 }
 for _p in POSTS:
     _p.setdefault("related", RELATED.get(_p["slug"], []))
-POSTS = POSTS + POSTS2
+POSTS = NEW + POSTS + POSTS2
 BY_SLUG = {q["slug"]: q for q in POSTS}
 
 def related_for(p):

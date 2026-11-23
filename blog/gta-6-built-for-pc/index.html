@@ -54,16 +54,19 @@
 <p>Static recompilation takes a console game's compiled code and translates it ahead of time into a new program that runs on PC. Fan projects have used this successfully on older games: N64Recomp for Nintendo 64 titles, and XenonRecomp for some Xbox 360 games.</p>
 <p>Modern consoles are much harder. Games are encrypted, depend on console-only system services, and are enormous. A GTA 6 recomp would need a complete, decrypted build plus a huge amount of work. Nobody has publicly shown one working.</p>
 
+<h2>4. Relinking: the AnyPS5 approach</h2>
+<p>A newer open-source project called AnyPS5 takes another route for PS5 games. Because the PS5 uses the same type of processor as a PC, it relinks a game's PS5 program into a PC program, then reimplements the console's system libraries and recompiles its graphics shaders. Some smaller PS5 games already reach gameplay this way. GTA 6 isn't one of them, because it hasn't been dumped from a PS5. Full story: <a href="../anyps5-gta-6-pc/">AnyPS5 and GTA 6</a>.</p>
+
 <h2>Why the Xbox version gets so much attention</h2>
 <p>Modern Xbox games are built with Microsoft's Game Development Kit (GDK), which shares a lot with Windows. Both use x86-64 processors and DirectX 12. That's why people think an Xbox build is easier to bring to PC than a PS5 one. It's still far from simple. See <a href="../gta-6-xbox-build-on-pc/">Can the leaked Xbox build run on PC?</a></p>
 
 <h2>Quick comparison</h2>
 <div class="table-wrap"><table>
-<tr><th></th><th>Native PC</th><th>Emulation</th><th>Recompilation</th></tr>
+<tr><th></th><th>Native PC</th><th>Emulation</th><th>Recompilation / relinking</th></tr>
 <tr><td>Who makes it</td><td>Rockstar</td><td>Fans</td><td>Fans</td></tr>
 <tr><td>Needs game files</td><td>No, you buy it</td><td>Yes, from a console</td><td>Yes, from a console</td></tr>
 <tr><td>Performance</td><td>Best</td><td>Heavy overhead</td><td>Can be good</td></tr>
-<tr><td>Exists for GTA 6</td><td>Not yet (reported Q1 2027)</td><td>No</td><td>No</td></tr>
+<tr><td>Exists for GTA 6</td><td>Not yet (reported Q1 2027)</td><td>No</td><td>No (AnyPS5 exists, GTA 6 not dumped)</td></tr>
 </table></div>
 
 <h2>How to spot a fake "native GTA 6 PC" claim</h2>
@@ -81,15 +84,15 @@
     </div>
   </article>
 </div>
-<div class="wrap related"><h2>More GTA 6 PC news</h2><div class="grid" style="padding-bottom:0"><a class="card" href="../../blog/gta-6-xbox-build-on-pc/">
+<div class="wrap related"><h2>More GTA 6 PC news</h2><div class="grid" style="padding-bottom:0"><a class="card" href="../../blog/anyps5-gta-6-pc/">
+  <div class="thumb"><img src="../../assets/blog/anyps5-gta-6-pc.jpg" alt="" loading="lazy" onerror="this.remove()"><span>AnyPS5 & GTA 6</span></div>
+  <div class="body"><div class="meta">Trending · November 23, 2026</div><h2>AnyPS5 and GTA 6: Can PS5 Games Run on PC Without an Emulator?</h2><p>AnyPS5 is an open-source project that turns PS5 games into native PC programs. Here's how it works, how far it's got, and why GTA 6 isn't running on it.</p></div>
+</a><a class="card" href="../../blog/gta-6-xbox-build-on-pc/">
   <div class="thumb"><img src="../../assets/blog/gta-6-xbox-build-on-pc.jpg" alt="" loading="lazy" onerror="this.remove()"><span>Xbox build on PC</span></div>
   <div class="body"><div class="meta">Xbox build · November 23, 2026</div><h2>Can the Leaked GTA 6 Xbox Build Run on PC? (November 2026)</h2><p>A leaked GTA 6 Xbox build has people asking whether it can run on Windows. Here's why it can't yet, what stands in the way, and why fake download sites are the real danger.</p></div>
 </a><a class="card" href="../../blog/gta-6-pc-leak/">
   <div class="thumb"><img src="../../assets/blog/gta-6-pc-leak.jpg" alt="" loading="lazy" onerror="this.remove()"><span>PC leaks</span></div>
   <div class="body"><div class="meta">Leaks · November 23, 2026</div><h2>GTA 6 PC Leak Explained: The Cyberleek Xbox Build and What's Real</h2><p>A hacker group says it leaked a near-complete GTA 6 Xbox build. Here's what was released, whether it can run on PC, the fake videos going around, and the malware risk.</p></div>
-</a><a class="card" href="../../blog/gta-6-pc-system-requirements/">
-  <div class="thumb"><img src="../../assets/blog/gta-6-pc-system-requirements.jpg" alt="" loading="lazy" onerror="this.remove()"><span>System requirements</span></div>
-  <div class="body"><div class="meta">Hardware · November 23, 2026</div><h2>GTA 6 PC System Requirements: What We Know and What to Expect</h2><p>Rockstar hasn't published GTA 6 PC requirements yet. Here's what the console hardware tells us, our estimated specs, and how much storage to plan for.</p></div>
 </a></div></div>
 </main>
 <footer><div class="wrap">

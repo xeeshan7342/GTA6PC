@@ -379,3 +379,68 @@ sources=[
 ],
 ),
 ]
+
+# Newest posts, shown first on the blog and homepage.
+NEW = [
+dict(
+slug="anyps5-gta-6-pc",
+short="AnyPS5 & GTA 6",
+title="AnyPS5 and GTA 6: Can PS5 Games Run on PC Without an Emulator?",
+h1="AnyPS5 and GTA 6: can PS5 games run on PC without an emulator?",
+desc="AnyPS5 is an open-source project that turns PS5 games into native PC programs. Here's how it works, how far it's got, and why GTA 6 isn't running on it.",
+kicker="Trending",
+lede="A 24/7 livestream tracking an open-source project called AnyPS5 has become one of the most-watched things in gaming this week. People want to know one thing: does it mean GTA 6 on PC? Here's the honest answer.",
+tldr="<strong>AnyPS5 is real</strong>, open source, and has some PS5 games reaching gameplay on PC. But <strong>GTA 6 isn't one of them</strong>. The game hasn't been dumped from a PS5, it requires <strong>firmware 14.23</strong>, and public PS5 jailbreaks only reach <strong>13.60</strong>. Don't trust anyone offering \"GTA 6 via AnyPS5\" downloads.",
+related=["gta-6-built-for-pc", "gta-6-pc-download-scams", "gta-6-pc-release-date"],
+cover=dict(eyebrow="Trending · PS5 games on PC", title="AnyPS5 × GTA 6", sub="Real project. GTA 6 isn't running on it.",
+           rows=[("Approach", "Relinking, not emulation", False), ("Latest release", "v0.1.5", False), ("GTA 6 status", "Not dumped", True), ("GTA 6 needs firmware", "14.23", True), ("Public jailbreak", "Up to 13.60", False)]),
+body="""
+<h2>What is AnyPS5?</h2>
+<p>AnyPS5 is an open-source project that tries to run PS5 games on Windows and Linux without emulating the console. Its official code is on GitHub, and it has quickly become one of the most-starred projects of its kind.</p>
+<p>Instead of pretending to be a PS5, it takes a game's PS5 program and <strong>relinks</strong> it into a native PC program. That's possible because the PS5 uses an AMD Zen 2 processor, the same x86-64 type of chip that's in PCs. The hard part is everything around the processor, so the project also:</p>
+<ul>
+<li>Rewrites the PS5's system libraries so games can call them on a PC.</li>
+<li>Recompiles the console's graphics shaders to run on Vulkan.</li>
+</ul>
+<p>Tom's Hardware compared the idea to Proton, the tool that lets Windows games run on Linux. It translates the parts that differ instead of emulating a whole machine.</p>
+
+<h2>How far has it got?</h2>
+<p>As of November 23, 2026, a live progress tracker streamed on YouTube showed:</p>
+<div class="table-wrap"><table>
+<tr><th>Measure</th><th>Status</th></tr>
+<tr><td>PS5 system functions implemented</td><td>About 18,000 of roughly 39,300 found (~46%)</td></tr>
+<tr><td>Games reaching gameplay</td><td>161 of 573 reported</td></tr>
+<tr><td>Latest release</td><td>v0.1.5</td></tr>
+<tr><td>GTA VI</td><td>Not dumped</td></tr>
+</table></div>
+<p>These numbers change daily. "Reaching gameplay" also doesn't mean a game is fully playable, and most of the games that work so far are small titles, not huge open worlds.</p>
+
+<h2>Why GTA 6 isn't running on AnyPS5</h2>
+<p>AnyPS5 doesn't come with any games. It needs the game's files, taken from a PS5 that the player has jailbroken. For GTA 6, that hasn't happened yet:</p>
+<ol>
+<li><strong>GTA 6 requires PS5 firmware 14.23.</strong> Sony released it on November 17, two days before launch, with notes that only mention "security fixes," and made it mandatory to play GTA 6.</li>
+<li><strong>Public PS5 jailbreaks only work up to firmware 13.60.</strong> A security researcher claimed to have dumped a game on 14.22, but didn't say which game or share details, and Sony patched again the next day.</li>
+<li><strong>So nobody can legally pull GTA 6 off their own PS5 yet</strong>, which means there's nothing for AnyPS5 to run.</li>
+</ol>
+<p>Even once that changes, a game as big and complex as GTA 6 would likely need a lot more of the PS5's system functions working before it got past loading screens.</p>
+
+<h2>Is AnyPS5 legal?</h2>
+<p>Projects that reimplement a console's software, like emulators, are generally legal in many countries. Downloading games you don't own is not. AnyPS5 is designed for players who dump games from their own console. Using pirated copies, or game files shared online, is piracy, and those files are a common way to spread malware.</p>
+
+<h2>Watch out for fake "AnyPS5 GTA 6" downloads</h2>
+<div class="warn"><strong>There is no GTA 6 build for AnyPS5.</strong> Expect fake "AnyPS5 + GTA 6" packs, unofficial AnyPS5 sites and YouTube links promising it works. Only get AnyPS5 from its official GitHub page, and never download GTA 6 game files from anyone. See our <a href="../gta-6-pc-download-scams/">guide to fake GTA 6 PC downloads</a>.</div>
+
+<h2>So when can PC players actually play GTA 6?</h2>
+<p>The realistic answer is still Rockstar's official PC version, which a GamesBeat report says is targeting the first quarter of 2027. AnyPS5 is a fascinating project to follow, but it isn't a shortcut to GTA 6 today. We explain the difference between native ports, emulation and recompilation in <a href="../gta-6-built-for-pc/">Is GTA 6 built for PC?</a></p>
+""",
+sources=[
+("Tom's Hardware: Open-source AnyPS5 runs PS5 games natively on PC", "https://www.tomshardware.com/video-games/playstation/open-source-anyps5-dumps-emulation-to-run-playstation-5-console-games-natively-on-pc-amd-zen-2-architecture-enables-proton-like-binary-translation-for-windows-and-linux"),
+("TechPowerUp: AnyPS5 project skips emulation entirely", "https://www.techpowerup.com/353098/anyps5-project-skips-emulation-entirely-aims-to-port-playstation-5-games-to-pc-directly"),
+("Hardware Busters: AnyPS5 relinks console games into native PC binaries", "https://hwbusters.com/news/anyps5-skips-ps5-emulation-and-relinks-console-games-into-native-pc-binaries/"),
+("Notebookcheck: PS5 update required to play GTA 6 following jailbreak development", "https://www.notebookcheck.net/Is-Sony-cracking-down-PS5-update-required-to-play-GTA-6-following-jailbreak-development.1453602.0.html"),
+("TechSpot: Sony releases new PS5 firmware as hackers set their sights on GTA VI", "https://www.techspot.com/news/114592-sony-releases-new-ps5-firmware-hackers-set-their.html"),
+("Wccftech: Researcher claims to have dumped a game binary on GTA 6's required firmware", "https://wccftech.com/playstation-5-gta-6-dumped-firmware-new-update/"),
+("GamesBeat: Grand Theft Auto VI's PC release is slated for Q1 2027", "https://gamesbeat.com/grand-theft-auto-vis-pc-release-is-slated-for-q1-2027/"),
+],
+),
+]
