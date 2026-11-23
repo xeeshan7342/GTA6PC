@@ -2,7 +2,7 @@
 import json, os, sys, html
 
 ROOT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(__file__), "..")
-SITE = "https://YOURDOMAIN.com"   # replace once the domain is bought
+SITE = "https://gta6pc.buzz"   # replace once the domain is bought
 NAME = "GTA6 PC"
 AUTHOR = "GTA6 PC Editorial"
 TODAY = "2026-11-23"
@@ -403,7 +403,7 @@ simple("about/", "about", "About GTA6 PC", "Who runs GTA6 PC, what we cover and 
 """)
 
 simple("contact/", "contact", "Contact GTA6 PC", "Get in touch with the GTA6 PC team for corrections, tips or questions.", "Contact", """
-<p>For corrections, news tips or general questions, email us at <a href="mailto:contact@YOURDOMAIN.com">contact@YOURDOMAIN.com</a>.</p>
+<p>For corrections, news tips or general questions, email us at <a href="mailto:contact@gta6pc.buzz">contact@gta6pc.buzz</a>.</p>
 <p>We read everything and usually reply within a few days. If you're reporting an error in an article, please include the link and what needs fixing.</p>
 """)
 
@@ -427,7 +427,7 @@ simple("privacy-policy/", "", "Privacy Policy | GTA6 PC", "How GTA6 PC handles d
 <h2>Changes</h2>
 <p>We may update this policy. The date at the top shows when it last changed.</p>
 <h2>Contact</h2>
-<p>Questions about this policy? Email <a href="mailto:contact@YOURDOMAIN.com">contact@YOURDOMAIN.com</a>.</p>
+<p>Questions about this policy? Email <a href="mailto:contact@gta6pc.buzz">contact@gta6pc.buzz</a>.</p>
 """)
 
 # sitemap + robots
