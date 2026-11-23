@@ -165,19 +165,29 @@ related=['gta-6-built-for-pc', 'anyps5-gta-6-pc', 'gta-6-xbox-build-on-pc'],
 dict(
 slug="gta-6-pc-steam",
 short="On Steam?",
-title="Is GTA 6 on Steam? No Steam Page, No PC Listing Yet",
-h1="Is GTA 6 on Steam?",
-desc="No. There is no GTA 6 Steam page, no Epic listing and no Rockstar Launcher PC page. Here is what each store shows today, and where the PC version will appear first when it is announced.",
+title="GTA 6 on Steam: A Suspicious App Page Appeared, But It Is Not Rockstar's Game",
+h1="Is GTA 6 on Steam? A fake app page appeared, but it is not the real game",
+desc="A Grand Theft Auto 6 page appeared on Steam around launch and was flagged as suspicious by SteamDB. Here is what the listing is, why it is not Rockstar's game, and how to tell a real Steam page from a fake one.",
 kicker="Stores",
-lede="The fastest way to check any GTA 6 PC claim is to look at the stores. If there is no store page, there is no PC version, no pre-order and no key. Here is the store-by-store status.",
-img_alt="Is GTA 6 on Steam poster showing no PC listing on Steam, Epic or Rockstar Launcher",
-tldr="<strong>GTA 6 is not on Steam.</strong> Searches of Steam's public store show no Grand Theft Auto VI listing, and Rockstar has not said which stores a PC version would use. The same is true for Epic and the Rockstar Games Launcher: console only, everywhere.",
-faq=[("Is GTA 6 on Steam?", "No. There is no Grand Theft Auto VI listing on Steam, and Rockstar has announced no PC version for any store."), ("Will GTA 6 come to Steam at launch on PC?", "Rockstar has not said. Red Dead Redemption 2 reached Steam about a month after its PC launch on other stores, so a delay is possible, but nothing is confirmed for GTA 6."), ("Can I wishlist GTA 6 on Steam?", "No. There is no page to wishlist. Pages or links claiming to be the GTA 6 Steam page are fake.")],
+lede="A page called Grand Theft Auto 6 showed up on Steam around launch day, and it is not what it looks like. SteamDB has flagged it as suspicious, and Rockstar has still announced no PC version. Here is what the listing is and how to check any store claim yourself.",
+img_alt="GTA 6 on Steam poster showing the suspicious app page flagged by SteamDB",
+tldr="<strong>GTA 6 is not officially on Steam.</strong> A page using the game's name appeared on Steam around the November 19 launch, but it has no screenshots, no developer or publisher, and a free-to-play tag that does not fit a $79.99 game. SteamDB flagged it as possibly malicious or impersonating another product, and advised users not to buy or download anything from it. Rockstar has announced no PC version for any store.",
+faq=[("Is GTA 6 on Steam?", "No, not officially. A suspicious page using the game's name appeared on Steam around launch, but it has no developer, publisher or screenshots, and SteamDB flagged it as possibly malicious. Rockstar has announced no PC version."), ("What is the GTA 6 Steam app page (app 2869070)?", "It is an unlisted Steam app page named Grand Theft Auto 6 that first appeared in SteamDB records on March 1, 2024 and saw a burst of activity around November 19, 2026. It shows no images and no developer or publisher, is tagged free-to-play, and SteamDB advises against buying or downloading anything from it."), ("Will GTA 6 come to Steam at launch on PC?", "Rockstar has not said. Red Dead Redemption 2 reached Steam about a month after its PC launch on other stores, so a delay is possible, but nothing is confirmed for GTA 6."), ("Can I wishlist GTA 6 on Steam?", "No. There is no official page to wishlist. The unlisted app page is not Rockstar's listing, and pages or links claiming to be the GTA 6 Steam page are fake."), ("How do I tell a real Steam page from a fake one?", "A real listing names its developer and publisher, shows screenshots and trailers, lists a price or release date, and appears in Steam search. The GTA 6 app page has none of these and is hidden from search.")],
 body="""
+<h2>The page that appeared</h2>
+<p>PCGamesN reported on November 20, 2026 that a page named Grand Theft Auto 6 had appeared on Steam. It is not a normal listing. The page is hidden from Steam search and opens only through its direct address, because Steam's own notice says it is unlisted at the publisher's request. It shows no images, no developer or publisher, and its store genre is listed as free-to-play. There is nothing to buy or download on it.</p>
+<p>The tracking site SteamDB, which is not run by Valve, has the fuller picture. The app, numbered 2869070, was first added to SteamDB's records on March 1, 2024, then sat largely idle for almost three years until a burst of activity around November 19, the day GTA 6 launched on consoles. SteamDB has flagged the application as suspicious, warning that it could be malicious or impersonating another product, and has advised users against purchasing or downloading it if it becomes available. Notebookcheck, VGTimes and Softonic all covered the listing the same way. Neither Valve nor Rockstar has commented on it.</p>
+<p>There is also an odd history behind the entry. Reports link the same app entry to earlier fake listings for Rust 2 and Elden Ring 2, connected to a publisher that was later banned. That does not prove this page itself contains malware, and nobody has shown that it does, but it is one more reason not to trust it. A page with no owner, no images and a history of impersonation is not a store listing. It is a trap waiting for a download button.</p>
+
+<h2>Why it is not Rockstar's game</h2>
+<p>Rockstar has announced no PC version of GTA 6, on Steam or anywhere else. That alone settles it, but the page gives itself away in several other ways. A real Rockstar listing would name Rockstar Games as the developer and publisher, show screenshots and trailers, list a price and a release date, and appear in Steam search. This page has none of those things.</p>
+<p>The free-to-play tag is the clearest giveaway. GTA 6 sells for $79.99 for the Standard Edition and $99.99 for the Ultimate Edition on consoles. A free-to-play tag on a $79.99 game does not fit, and no official listing would carry it. The page's age is another tell. An app entry from March 2024 that sat idle for almost three years is not how Rockstar launches a store page. Rockstar's store pages arrive with trailers, screenshots and a Newswire post, not as a blank page that wakes up on launch day.</p>
+<p>None of this changes the underlying position. There is still no official GTA 6 listing on Steam, Epic or the Rockstar Games Launcher, and there is no PC version to buy, pre-order or wishlist. What changed on November 19 is that scammers now have a page on Steam itself to point people at, which makes the checks below more important, not less.</p>
+
 <h2>Store by store, checked November 2026</h2>
 <div class="table-wrap"><table>
 <tr><th>Store</th><th>GTA 6 PC listing?</th><th>Notes</th></tr>
-<tr><td>Steam</td><td>No</td><td>No Grand Theft Auto VI page exists in Steam's public store</td></tr>
+<tr><td>Steam</td><td>No official listing</td><td>One suspicious unlisted app page (2869070) using the game's name, flagged by SteamDB. Not Rockstar's.</td></tr>
 <tr><td>Epic Games Store</td><td>No</td><td>No listing</td></tr>
 <tr><td>Rockstar Games Launcher</td><td>No PC listing</td><td>Console versions are sold through the Rockstar store for PS5 and Xbox</td></tr>
 <tr><td>PlayStation Store</td><td>Console only</td><td>PS5 version, $79.99 standard edition in the US</td></tr>
@@ -187,23 +197,31 @@ body="""
 <h2>What Rockstar's history suggests</h2>
 <p>GTA V is sold on Steam, Epic and the Rockstar Launcher today. Red Dead Redemption 2 launched on PC through the Rockstar Launcher and Epic first, with Steam following about a month later. So a staggered store rollout for GTA 6 is plausible. Plausible is all it is: Rockstar has announced nothing, and a store page appearing is itself one of the first real signs a PC version is coming. Our <a href="../gta-6-pc-launch/">PC launch explainer</a> covers the expected pattern in full.</p>
 
-<h2>The wishlist scam</h2>
-<p>Fake 'Steam page' links circulate every time a big game is PC-less. They lead to phishing pages that copy Steam's design and harvest logins. Type store.steampowered.com into your browser yourself and search there, never follow a shared link to a store page for an unannounced game. And if a key site offers a Steam key for a game with no Steam page, you already have your answer, as our <a href="../gta-6-pc-price-preorder/">price and pre-order guide</a> explains.</p>
+<h2>How to check a store claim yourself</h2>
+<p>Fake store pages circulate every time a big game is PC-less, and the GTA 6 app page shows the scam has now reached Steam itself. The checks take a minute and they work for any game. Type store.steampowered.com into your browser yourself and search there, and never follow a shared link to a store page for an unannounced game. Phishing pages copy Steam's design and harvest logins, and a shared link is how most people reach them.</p>
+<p>Then read the page like a checklist. A real listing names its developer and publisher, shows screenshots and trailers, lists a price or a release date, and appears in search. If all four are missing, it is not a real listing. For extra certainty, look the app up on SteamDB, which shows when the entry was created and how often it changed. A real Rockstar page would be new, busy and complete. This one was created in March 2024, sat idle for almost three years, and is blank.</p>
+<p>The same rule covers keys. If a key site offers a Steam key for a game with no official Steam page, you already have your answer, as our <a href="../gta-6-pc-price/">price and pre-order guide</a> explains. And if a site offers a download, installer or early access build for GTA 6 on PC, it is fake, as our <a href="../gta-6-pc-download-scams/">fake download guide</a> explains in detail.</p>
 
 <h2>Quick answers</h2>
 <h3>Is GTA 6 on Steam?</h3>
-<p>No. There is no Grand Theft Auto VI listing on Steam, and Rockstar has announced no PC version for any store.</p>
+<p>No, not officially. A suspicious page using the game's name appeared on Steam around launch, but it has no developer, publisher or screenshots, and SteamDB flagged it as possibly malicious. Rockstar has announced no PC version for any store.</p>
+<h3>What is the GTA 6 Steam app page?</h3>
+<p>It is an unlisted Steam app page, numbered 2869070, named Grand Theft Auto 6. It first appeared in SteamDB records on March 1, 2024 and saw a burst of activity around November 19, 2026. It shows no images and no developer or publisher, is tagged free-to-play, and SteamDB advises against buying or downloading anything from it.</p>
 <h3>Will GTA 6 come to Steam at launch on PC?</h3>
 <p>Rockstar has not said. Red Dead Redemption 2 reached Steam about a month after its PC launch on other stores, so a delay is possible, but nothing is confirmed for GTA 6.</p>
 <h3>Can I wishlist GTA 6 on Steam?</h3>
-<p>No. There is no page to wishlist. Pages or links claiming to be the GTA 6 Steam page are fake.</p>
+<p>No. There is no official page to wishlist. The unlisted app page is not Rockstar's listing, and pages or links claiming to be the GTA 6 Steam page are fake.</p>
 """,
 sources=[
 ("TechGuideHQ: GTA 6 PC official status, Steam and system requirements", "https://techguidehq.com/gta-6-pc/"),
 ("GTASnaps: GTA 6 PC system requirements, none exist yet", "https://gtasnaps.com/gta-6-pc-system-requirements/"),
+("Notebookcheck: GTA 6 has appeared on Steam, but it is not the PC port fans are waiting for", "https://www.notebookcheck.net/GTA-6-has-appeared-on-Steam-but-it-s-not-the-PC-port-fans-are-waiting-for.1456857.0.html"),
+("VGTimes: A suspicious Grand Theft Auto 6 Steam page appeared around launch", "https://vgtimes.com/gaming-news/175239-a-suspicious-grand-theft-auto-6-steam-page-appeared-around-launch.html?from=announce"),
+("Softonic: GTA 6 has appeared on Steam, but don't get excited yet", "https://en.softonic.com/articles/gta-6-has-appeared-on-steam-but-dont-get-excited-yet"),
+("GTA Bay: Fake GTA 6 PC downloads are malware", "https://gtabay.com/en/news/fake-gta-6-pc-download-malware"),
 ],
-cover=dict(eyebrow='Stores · status', title='Is GTA 6 on Steam?', sub='No Steam page and no PC listing yet.', rows=[('Steam', 'no listing', True), ('Epic', 'no listing', False), ('Rockstar Launcher', 'console only', False)]),
-related=['gta-6-pc-price', 'gta-6-pc-launch', 'gta-6-pc-release-date'],
+cover=dict(eyebrow='Stores · warning', title='GTA 6 on Steam?', sub='A suspicious app page appeared. Not Rockstar.', rows=[('Steam', 'suspicious app page', True), ('Epic', 'no listing', False), ('Rockstar Launcher', 'console only', False)]),
+related=['gta-6-pc-price', 'gta-6-pc-download-scams', 'gta-6-pc-release-date'],
 ),
 dict(
 slug="best-pc-build-for-gta-6",
