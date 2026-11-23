@@ -316,6 +316,7 @@ sources=[
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from posts2 import POSTS2, NEW
 from posts3 import NEW2
+from posts4 import POSTS4
 RELATED = {
     "gta-6-pc-release-date": ["gta-6-pc-vs-console", "rockstar-pc-ports-history", "gta-6-pc-price"],
     "gta-6-pc-launch": ["gta-6-pc-system-requirements", "gta-6-pc-price", "gta-6-pc-mods-fivem"],
@@ -325,7 +326,7 @@ RELATED = {
 }
 for _p in POSTS:
     _p.setdefault("related", RELATED.get(_p["slug"], []))
-POSTS = NEW2 + NEW + POSTS + POSTS2
+POSTS = NEW2 + NEW + POSTS + POSTS2 + POSTS4
 BY_SLUG = {q["slug"]: q for q in POSTS}
 
 def related_for(p):
@@ -368,9 +369,12 @@ for p in POSTS:
         {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE}/"},
         {"@type": "ListItem", "position": 2, "name": "Blog", "item": f"{SITE}/blog/"},
         {"@type": "ListItem", "position": 3, "name": p["h1"], "item": url}]}
+    lds = [article_ld, crumbs_ld]
+    if p.get("faq"):
+        lds.append({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in p["faq"]]})
     sources = "".join(f'<li><a href="{u}" rel="noopener" target="_blank">{html.escape(t)}</a></li>' for t, u in p["sources"])
     related = "".join(card(q, 2) for q in related_for(p))
-    page = head(p["title"], p["desc"], path, 2, f"{SITE}/assets/blog/{p['slug']}.jpg", "article", [article_ld, crumbs_ld]) + nav(2, "blog") + f'''
+    page = head(p["title"], p["desc"], path, 2, f"{SITE}/assets/blog/{p['slug']}.jpg", "article", lds) + nav(2, "blog") + f'''
 <main>
 <div class="narrow">
   <div class="crumbs"><a href="../../">Home</a> / <a href="../">Blog</a> / {p["short"]}</div>
@@ -399,12 +403,12 @@ for p in POSTS:
 # blog index
 blog_ld = {"@context": "https://schema.org", "@type": "Blog", "name": f"{NAME} Blog", "url": f"{SITE}/blog/",
            "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "url": f"{SITE}/blog/{p['slug']}/", "datePublished": TODAY} for p in POSTS]}
-write("blog/index.html", head("GTA 6 PC News, Leaks and Release Date | GTA6 PC Blog",
+write("blog/index.html", head("GTA 6 PC News: Release Date, Requirements, Native Builds and Leaks | GTA6 PC Blog",
       "The latest GTA 6 PC news: release date status, the leaked Xbox build, what a native PC version means, and how to avoid fake GTA 6 PC downloads.",
       "blog/", 1, None, "website", [blog_ld]) + nav(1, "blog") + f'''
 <main class="wrap">
   <div class="page-head"><div class="eyebrow">Blog</div><h1 class="display">GTA 6 PC news</h1>
-  <p>Release date updates, leak coverage and plain-English explainers for everyone waiting on GTA 6 for PC. Every article links to its sources.</p></div>
+  <p>Release date updates, leak coverage and plain-English explainers for everyone waiting on GTA 6 for PC. Every article links to its sources.</p><p style="margin-top:14px">Popular searches: <a href="gta-6-pc-release-date/">release date</a> · <a href="gta-6-pc-system-requirements/">system requirements</a> · <a href="gta-6-pc-download-scams/">PC download</a> · <a href="gta-6-pc-native-build/">native build tracker</a> · <a href="anyps5-gta-6-pc/">AnyPS5</a> · <a href="gta-6-ps5-build-on-pc/">PS5 build on PC</a> · <a href="gta-6-pc-emulator/">emulator</a> · <a href="gta-6-pc-steam/">Steam</a></p></div>
   <div class="grid">{"".join(card(p, 1) for p in POSTS)}</div>
 </main>
 ''' + footer(1) + "\n</body>\n</html>\n")
