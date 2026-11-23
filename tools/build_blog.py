@@ -52,6 +52,10 @@ def head(title, desc, path, depth, og_image=None, og_type="website", extra_ld=No
 <meta property="og:url" content="{url}">
 <meta property="og:image" content="{img}">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0c0814">
 {FONTS}
 <link rel="stylesheet" href="{up}assets/site.css">
 <!-- Google AdSense: paste the AdSense <script> tag here once your site is approved -->
