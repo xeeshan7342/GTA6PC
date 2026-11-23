@@ -1,12 +1,12 @@
 :root {
-  --bg: #0c0814;
-  --bg-2: #120c1c;
-  --card: #17111f;
-  --line: #2a2238;
+  --bg: #0f0b1e;
+  --bg-2: #151029;
+  --card: #1b1533;
+  --line: #2f2752;
   --ink: #f6f0fb;
-  --muted: #a99db9;
+  --muted: #b2a8cf;
   --accent: #ff8a4c;
-  --btn: #2a1a2e;
+  --btn: #2a2148;
   --grad: linear-gradient(90deg, #ffc24d 0%, #ff8a4c 50%, #ff4fa3 100%);
   --display: "Archivo", "Arial Black", sans-serif;
   --mono: "JetBrains Mono", ui-monospace, monospace;
@@ -21,7 +21,7 @@ img { max-width: 100%; height: auto; display: block; }
 .eyebrow { font-family: var(--mono); font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); }
 
 /* nav */
-nav { position: sticky; top: 0; z-index: 50; background: rgba(12,8,20,.88); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+nav { position: sticky; top: 0; z-index: 50; background: rgba(15,11,30,.88); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
 nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
 .logo { font-family: var(--mono); font-size: 20px; font-weight: 500; display: inline-flex; align-items: center; text-decoration: none; }
 .logo b { color: var(--accent); font-weight: 500; margin-left: 10px; }
@@ -36,7 +36,7 @@ nav .wrap { display: flex; align-items: center; justify-content: space-between; 
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 22px; padding-bottom: 100px; }
 .card { display: flex; flex-direction: column; background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; text-decoration: none; transition: border-color .2s, transform .2s; }
 .card:hover { border-color: var(--accent); transform: translateY(-3px); }
-.card .thumb { aspect-ratio: 16/9; background: linear-gradient(160deg, #3d1240, #1e0d2c 60%, #120c1c); position: relative; }
+.card .thumb { aspect-ratio: 16/9; background: linear-gradient(160deg, #6a4f9c, #3a2c66 55%, #151029); position: relative; }
 .card .thumb img { width: 100%; height: 100%; object-fit: cover; }
 .card .thumb span { position: absolute; left: 20px; bottom: 16px; font-family: var(--display); font-stretch: 125%; font-weight: 900; font-size: 30px; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .card .body { padding: 22px 24px 26px; display: flex; flex-direction: column; gap: 10px; }
