@@ -89,12 +89,12 @@ body="""
 <p>Rockstar has a long habit of launching on consoles first and bringing the PC version later. Here's how long PC players waited for its last three big releases:</p>
 <div class="table-wrap"><table>
 <tr><th>Game</th><th>Console launch</th><th>PC launch</th><th>Wait</th></tr>
-<tr><td>GTA IV</td><td>April 2008</td><td>December 2008</td><td>~8 months</td></tr>
+<tr><td>GTA IV</td><td>April 2008</td><td>December 2008</td><td>~7 months</td></tr>
 <tr><td>GTA V</td><td>September 2013</td><td>April 2015</td><td>~19 months</td></tr>
 <tr><td>Red Dead Redemption 2</td><td>October 2018</td><td>November 2019</td><td>~13 months</td></tr>
 <tr><td>GTA 6</td><td>November 19, 2026</td><td>Not announced</td><td>Q1 2027 would be ~2–4 months</td></tr>
 </table></div>
-<figure class="hero-img"><img src="../../assets/blog/rockstar-pc-wait-times.jpg" alt="Chart of how long Rockstar PC versions took after console launch: GTA IV about 8 months, GTA V about 19 months, Red Dead Redemption 2 about 13 months" width="1280" height="720" loading="lazy"><figcaption>Graphic: GTA6 PC, based on each game's console and PC release dates</figcaption></figure>
+<figure class="hero-img"><img src="../../assets/blog/rockstar-pc-wait-times.jpg" alt="Chart of how long Rockstar PC versions took after console launch: GTA IV about 7 months, GTA V about 19 months, Red Dead Redemption 2 about 13 months" width="1280" height="720" loading="lazy"><figcaption>Graphic: GTA6 PC, based on each game's console and PC release dates</figcaption></figure>
 <p>If the Q1 2027 report is right, this would be the shortest console-to-PC gap Rockstar has ever had. If Rockstar sticks to its usual pattern, late 2027 is more likely.</p>
 
 <h2>Where the announcement will come from</h2>
@@ -310,9 +310,30 @@ sources=[
 ),
 ]
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from posts2 import POSTS2
+RELATED = {
+    "gta-6-pc-release-date": ["gta-6-pc-vs-console", "rockstar-pc-ports-history", "gta-6-pc-price"],
+    "gta-6-pc-launch": ["gta-6-pc-system-requirements", "gta-6-pc-price", "gta-6-pc-mods-fivem"],
+    "gta-6-pc-leak": ["gta-6-pc-download-scams", "gta-6-xbox-build-on-pc", "gta-6-built-for-pc"],
+    "gta-6-built-for-pc": ["gta-6-xbox-build-on-pc", "gta-6-pc-leak", "gta-6-pc-system-requirements"],
+    "gta-6-xbox-build-on-pc": ["gta-6-pc-download-scams", "gta-6-pc-leak", "gta-6-built-for-pc"],
+}
+for _p in POSTS:
+    _p.setdefault("related", RELATED.get(_p["slug"], []))
+POSTS = POSTS + POSTS2
+BY_SLUG = {q["slug"]: q for q in POSTS}
+
+def related_for(p):
+    picks = [BY_SLUG[s] for s in p.get("related", []) if s in BY_SLUG]
+    for q in POSTS:
+        if len(picks) >= 3: break
+        if q is not p and q not in picks: picks.append(q)
+    return picks[:3]
+
 def img_block(p, depth, cls="hero-img"):
     up = "../" * depth
-    return (f'<figure class="{cls}"><img src="{up}assets/blog/{p["slug"]}.jpg" alt="{html.escape(p["img_alt"])}" width="1600" height="900" '
+    return (f'<figure class="{cls}"><img src="{up}assets/blog/{p["slug"]}.jpg" alt="{html.escape(p.get("img_alt", p["title"]))}" width="1600" height="900" '
             f'onerror="this.closest(\'figure\').remove()"><figcaption>{p.get("caption", "Graphic: GTA6 PC")}</figcaption></figure>')
 
 def card(p, depth):
@@ -344,7 +365,7 @@ for p in POSTS:
         {"@type": "ListItem", "position": 2, "name": "Blog", "item": f"{SITE}/blog/"},
         {"@type": "ListItem", "position": 3, "name": p["h1"], "item": url}]}
     sources = "".join(f'<li><a href="{u}" rel="noopener" target="_blank">{html.escape(t)}</a></li>' for t, u in p["sources"])
-    related = "".join([card(q, 2) for q in POSTS if q is not p][:3])
+    related = "".join(card(q, 2) for q in related_for(p))
     page = head(p["title"], p["desc"], path, 2, f"{SITE}/assets/blog/{p['slug']}.jpg", "article", [article_ld, crumbs_ld]) + nav(2, "blog") + f'''
 <main>
 <div class="narrow">
@@ -434,6 +455,17 @@ simple("privacy-policy/", "", "Privacy Policy | GTA6 PC", "How GTA6 PC handles d
 <h2>Contact</h2>
 <p>Questions about this policy? Email <a href="mailto:contact@gta6pc.buzz">contact@gta6pc.buzz</a>.</p>
 """)
+
+# homepage "latest news" block
+home = os.path.join(ROOT, "index.html")
+h = open(home).read()
+a, b = "<!--LATEST-->", "<!--/LATEST-->"
+if a in h:
+    items = "".join(
+        f'<a class="lcard" href="blog/{q["slug"]}/"><img src="assets/blog/{q["slug"]}.jpg" alt="" loading="lazy" width="1280" height="720"><span class="lk">{q["kicker"]}</span><span class="lt">{html.escape(q["title"])}</span></a>'
+        for q in POSTS[:6])
+    h = h[:h.index(a) + len(a)] + items + h[h.index(b):]
+    open(home, "w").write(h)
 
 # sitemap + robots
 urls = ["", "blog/"] + [f"blog/{p['slug']}/" for p in POSTS] + ["about/", "contact/", "privacy-policy/"]

@@ -100,6 +100,15 @@
   details[open] summary::after { transform: rotate(45deg); }
   details p { padding: 0 28px 24px; color: var(--muted); }
 
+  .latest { padding: 110px 0 40px; }
+  .latest .head { display: flex; justify-content: space-between; align-items: end; gap: 20px; flex-wrap: wrap; margin-bottom: 34px; }
+  .latest .head h2.display { margin: 14px 0 0; }
+  .lgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .lcard { display: flex; flex-direction: column; background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; transition: border-color .2s, transform .2s; }
+  .lcard:hover { border-color: var(--accent); transform: translateY(-3px); }
+  .lcard img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; display: block; }
+  .lcard .lk { font-family: var(--mono); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); padding: 18px 22px 0; }
+  .lcard .lt { font-weight: 700; font-size: 18px; line-height: 1.35; padding: 8px 22px 22px; }
   /* SIZE */
   .size { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .gb { font-family: var(--display); font-stretch: 125%; font-weight: 900; font-size: clamp(100px, 16vw, 210px); line-height: .85; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
@@ -133,6 +142,7 @@
   .reveal.in { opacity: 1; transform: none; }
 
   @media (max-width: 960px) {
+    .lgrid { grid-template-columns: 1fr 1fr; }
     .hero .wrap, .two { grid-template-columns: 1fr; }
     .two { gap: 60px; }
     .hero::before { background: linear-gradient(0deg, rgba(15,11,30,.97) 0%, rgba(15,11,30,.85) 45%, rgba(15,11,30,.35) 75%, rgba(15,11,30,.15) 100%); }
@@ -141,6 +151,8 @@
     .nav-links { display: none; }
   }
   @media (max-width: 640px) {
+    .lgrid { grid-template-columns: 1fr; }
+    .latest { padding: 80px 0 20px; }
     .hero { padding: 240px 0 80px; min-height: 0; }
     section { padding: 80px 0; }
     .strip .wrap { grid-template-columns: 1fr; }
@@ -200,6 +212,16 @@
     <div class="item"><div class="k">Install size (est.)</div><div class="v">~234 GB</div></div>
   </div>
 </div>
+
+<section class="latest" id="news">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><div class="eyebrow">Latest GTA 6 PC news</div><h2 class="display">From the blog</h2></div>
+      <a href="blog/" class="btn">All articles</a>
+    </div>
+    <div class="lgrid"><!--LATEST--><a class="lcard" href="blog/gta-6-pc-release-date/"><img src="assets/blog/gta-6-pc-release-date.jpg" alt="" loading="lazy" width="1280" height="720"><span class="lk">Release date</span><span class="lt">When Is GTA 6 Coming to PC? Release Date Status (November 2026)</span></a><a class="lcard" href="blog/gta-6-pc-launch/"><img src="assets/blog/gta-6-pc-launch.jpg" alt="" loading="lazy" width="1280" height="720"><span class="lk">PC launch</span><span class="lt">GTA 6 PC Launch: What to Expect When It Arrives</span></a><a class="lcard" href="blog/gta-6-pc-leak/"><img src="assets/blog/gta-6-pc-leak.jpg" alt="" loading="lazy" width="1280" height="720"><span class="lk">Leaks</span><span class="lt">GTA 6 PC Leak Explained: The Cyberleek Xbox Build and What&#x27;s Real</span></a><a class="lcard" href="blog/gta-6-built-for-pc/"><img src="assets/blog/gta-6-built-for-pc.jpg" alt="" loading="lazy" width="1280" height="720"><span class="lk">Explainer</span><span class="lt">Is GTA 6 Built for PC? Native Port vs Emulation vs Recompilation</span></a><a class="lcard" href="blog/gta-6-xbox-build-on-pc/"><img src="assets/blog/gta-6-xbox-build-on-pc.jpg" alt="" loading="lazy" width="1280" height="720"><span class="lk">Xbox build</span><span class="lt">Can the Leaked GTA 6 Xbox Build Run on PC? (November 2026)</span></a><a class="lcard" href="blog/gta-6-pc-system-requirements/"><img src="assets/blog/gta-6-pc-system-requirements.jpg" alt="" loading="lazy" width="1280" height="720"><span class="lk">Hardware</span><span class="lt">GTA 6 PC System Requirements: What We Know and What to Expect</span></a><!--/LATEST--></div>
+  </div>
+</section>
 
 <section id="about">
   <div class="wrap two">

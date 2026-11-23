@@ -1,0 +1,7 @@
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1280px;height:720px;overflow:hidden}
+body{background:radial-gradient(ellipse at 85% 0%,rgba(255,138,76,.18),transparent 55%),linear-gradient(160deg,#2a2148 0%,#151029 55%,#0f0b1e 100%);color:#f6f0fb;font-family:Inter,sans-serif;padding:56px 64px;position:relative}
+.eb{font-family:"JetBrains Mono",monospace;font-size:18px;letter-spacing:4px;color:#ff8a4c;text-transform:uppercase;font-weight:600}
+h1{font-family:Archivo,sans-serif;font-stretch:125%;font-weight:900;font-size:50px;line-height:1.05;margin:12px 0 34px}
+.mark{position:absolute;right:40px;bottom:28px;font-family:"JetBrains Mono",monospace;font-size:18px;color:#b2a8cf}
+.mark b{color:#ff8a4c;font-weight:500}
