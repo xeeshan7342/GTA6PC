@@ -315,6 +315,7 @@ sources=[
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from posts2 import POSTS2, NEW
+from posts3 import NEW2
 RELATED = {
     "gta-6-pc-release-date": ["gta-6-pc-vs-console", "rockstar-pc-ports-history", "gta-6-pc-price"],
     "gta-6-pc-launch": ["gta-6-pc-system-requirements", "gta-6-pc-price", "gta-6-pc-mods-fivem"],
@@ -324,7 +325,7 @@ RELATED = {
 }
 for _p in POSTS:
     _p.setdefault("related", RELATED.get(_p["slug"], []))
-POSTS = NEW + POSTS + POSTS2
+POSTS = NEW2 + NEW + POSTS + POSTS2
 BY_SLUG = {q["slug"]: q for q in POSTS}
 
 def related_for(p):

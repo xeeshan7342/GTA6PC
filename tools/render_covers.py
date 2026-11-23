@@ -8,6 +8,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, "..")
 sys.path.insert(0, HERE)
 from posts2 import POSTS2, NEW
+from posts3 import NEW2
 
 CSS = open(os.path.join(HERE, "cover-base.css")).read()
 TPL = """<!doctype html><html><head><meta charset="utf-8">
@@ -29,7 +30,7 @@ h1{{font-size:{size}px;margin:16px 0 22px}}
 
 jobs = []
 tmp = tempfile.mkdtemp()
-for p in NEW + POSTS2:
+for p in NEW2 + NEW + POSTS2:
     c = p.get("cover")
     if not c: continue
     rows = "".join(f'<div class="row{" hot" if hot else ""}"><span class="l">{html.escape(l)}</span><span class="v">{html.escape(v)}</span></div>' for l, v, hot in c["rows"])
