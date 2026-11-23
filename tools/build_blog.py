@@ -318,6 +318,10 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from posts2 import POSTS2, NEW
 from posts3 import NEW2
 from posts4 import POSTS4
+from posts_daily_20261123_b2 import POSTS_DAILY_20261123_B2
+from posts_daily_20261123_b3 import POSTS_DAILY_20261123_B3
+from posts_daily_20261123_b4 import POSTS_DAILY_20261123_B4
+from posts_daily_20261123_b5 import POSTS_DAILY_20261123_B5
 RELATED = {
     "gta-6-pc-release-date": ["gta-6-pc-vs-console", "rockstar-pc-ports-history", "gta-6-pc-price"],
     "gta-6-pc-launch": ["gta-6-pc-system-requirements", "gta-6-pc-price", "gta-6-pc-mods-fivem"],
@@ -327,14 +331,14 @@ RELATED = {
 }
 for _p in POSTS:
     _p.setdefault("related", RELATED.get(_p["slug"], []))
-POSTS = NEW2 + NEW + POSTS + POSTS2 + POSTS4
+POSTS = NEW2 + NEW + POSTS + POSTS2 + POSTS4 + POSTS_DAILY_20261123_B2 + POSTS_DAILY_20261123_B3 + POSTS_DAILY_20261123_B4 + POSTS_DAILY_20261123_B5
 BY_SLUG = {q["slug"]: q for q in POSTS}
 
 TOPICS = [
     ("leaks-and-ports", "Leaks & PC ports", "Cyberleek, the leaked Xbox build, AnyPS5, Leonida, dumps and every unofficial route to GTA 6 on PC.",
      ["leak", "cyberleek", "leonida", "xbox", "dump", "anyps5", "emulator", "ps5-build", "native-build", "built-for-pc", "modders"]),
     ("hardware", "PC hardware & performance", "System requirements, file size, frame rates and what kind of PC you'll need for GTA 6.",
-     ["requirements", "file-size", "fps", "best-pc", "system"]),
+     ["requirements", "file-size", "fps", "best-pc", "system", "ray"]),
     ("guides", "Guides & safety", "How to play GTA 6 on PC today, avoiding scams and fake videos, price, stores and mods.",
      ["scam", "fake", "remote-play", "vs-console", "price", "steam", "mods"]),
     ("release-news", "Release date & news", "The GTA 6 PC release date, launch expectations, GTA 6 Online, sales and Take-Two news.",
