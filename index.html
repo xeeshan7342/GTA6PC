@@ -170,6 +170,8 @@
     .reveal { opacity: 1; transform: none; }
   }
 </style>
+<link rel="alternate" type="application/rss+xml" title="GTA6 PC news" href="https://gta6pc.buzz/feed.xml">
+<!--LD--><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://gta6pc.buzz/#org", "name": "GTA6 PC", "url": "https://gta6pc.buzz/", "logo": "https://gta6pc.buzz/assets/icon-512.png", "email": "contact@gta6pc.buzz"}, {"@type": "WebSite", "@id": "https://gta6pc.buzz/#site", "name": "GTA6 PC", "url": "https://gta6pc.buzz/", "publisher": {"@id": "https://gta6pc.buzz/#org"}, "inLanguage": "en"}]}</script><!--/LD-->
 </head>
 <body>
 
@@ -182,9 +184,9 @@
       <a href="#size">Install Size</a>
       <a href="blog/">Blog</a>
     </div>
-    <a href="#notify" class="btn btn-outline" aria-label="Get notified">
+    <a href="blog/" class="btn btn-outline" aria-label="Latest news">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
-      <span class="t">Get Notified</span>
+      <span class="t">Latest News</span>
     </a>
   </div>
 </nav>
@@ -197,7 +199,7 @@
       <h1 class="display">COMING<span>SOON</span></h1>
       <p class="lead">GTA 6 is out on PS5 and Xbox, and the <strong>PC version is coming soon</strong>. Rockstar hasn't announced a date yet, but reports point to <strong>early 2027</strong>. Follow the latest GTA 6 PC news here.</p>
       <div class="cta">
-        <a href="#notify" class="btn btn-accent">Notify me at launch</a>
+        <a href="blog/play-gta-6-on-pc-remote-play/" class="btn btn-accent">Play on PC today</a>
         <a href="blog/" class="btn">Read the latest news</a>
       </div>
     </div>
@@ -266,14 +268,13 @@
 
 <section id="notify" class="notify">
   <div class="wrap reveal">
-    <div class="eyebrow">Don't miss the drop</div>
-    <h2 class="display">Be first on PC</h2>
-    <p>Drop your email and we'll let you know the moment GTA 6 lands on PC.</p>
-    <form class="form" id="form" novalidate>
-      <input type="email" id="email" placeholder="you@email.com" aria-label="Email address">
-      <button class="btn btn-accent" type="submit">Notify me</button>
-    </form>
-    <div class="msg" id="msg" role="status"></div>
+    <div class="eyebrow">Stay updated</div>
+    <h2 class="display">Be first to know</h2>
+    <p>We update our release date page the moment Rockstar announces the PC version. Bookmark it, or follow our RSS feed.</p>
+    <div class="cta" style="justify-content:center">
+      <a href="blog/gta-6-pc-release-date/" class="btn btn-accent">GTA 6 PC release date</a>
+      <a href="feed.xml" class="btn">RSS feed</a>
+    </div>
   </div>
 </section>
 
@@ -285,11 +286,14 @@
         <p>GTA 6 PC news · coming soon · unofficial fan site</p>
       </div>
       <div class="foot-links">
-        <a href="#about">About</a>
         <a href="#faq">FAQ</a>
-        <a href="#notify">Get Notified</a>
         <a href="blog/">Blog</a>
-        <a href="privacy-policy/">Privacy Policy</a>
+        <a href="blog/topic/">Topics</a>
+        <a href="about/">About</a>
+        <a href="contact/">Contact</a>
+        <a href="privacy-policy/">Privacy</a>
+        <a href="terms/">Terms</a>
+        <a href="disclaimer/">Disclaimer</a>
       </div>
     </div>
     <p class="legal">This is an unofficial fan page. It is not affiliated with, endorsed by or sponsored by Rockstar Games or Take-Two Interactive. Grand Theft Auto and related marks are trademarks of Take-Two Interactive Software, Inc.</p>
@@ -317,13 +321,6 @@
   }), { threshold: 0.2 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  document.getElementById('form').addEventListener('submit', e => {
-    e.preventDefault();
-    const email = document.getElementById('email'), msg = document.getElementById('msg');
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) { msg.textContent = 'Enter a valid email address.'; return; }
-    msg.textContent = "You're on the list. See you in Leonida.";
-    email.value = '';
-  });
 </script>
 </body>
 </html>

@@ -11,7 +11,7 @@ TODAY_H = "November 23, 2026"
 FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800;125,900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">'
 
 def nav(depth, current=""):
-    up = "../" * depth
+    up = "/" if depth < 0 else "../" * depth
     def a(href, label, key, cls=""):
         cur = ' aria-current="page"' if key == current else ""
         c = f' class="{cls}"' if cls else ""
@@ -22,17 +22,17 @@ def nav(depth, current=""):
 </div></nav>'''
 
 def footer(depth):
-    up = "../" * depth
+    up = "/" if depth < 0 else "../" * depth
     return f'''<footer><div class="wrap">
   <div class="foot-top">
     <div><a href="{up}" class="logo">GTA6<b>PC</b></a><p>GTA 6 PC news, release info and guides · unofficial fan site</p></div>
-    <div class="foot-links"><a href="{up}blog/">Blog</a><a href="{up}about/">About</a><a href="{up}contact/">Contact</a><a href="{up}privacy-policy/">Privacy Policy</a></div>
+    <div class="foot-links"><a href="{up}blog/">Blog</a><a href="{up}blog/topic/">Topics</a><a href="{up}about/">About</a><a href="{up}contact/">Contact</a><a href="{up}privacy-policy/">Privacy</a><a href="{up}terms/">Terms</a><a href="{up}disclaimer/">Disclaimer</a><a href="{up}feed.xml">RSS</a></div>
   </div>
   <p class="legal">{NAME} is an unofficial fan site. It is not affiliated with, endorsed by or sponsored by Rockstar Games or Take-Two Interactive. Grand Theft Auto and related marks are trademarks of Take-Two Interactive Software, Inc. Artwork credited to Rockstar Games is used for news reporting and commentary.</p>
 </div></footer>'''
 
-def head(title, desc, path, depth, og_image=None, og_type="website", extra_ld=None):
-    up = "../" * depth
+def head(title, desc, path, depth, og_image=None, og_type="website", extra_ld=None, noindex=False):
+    up = "/" if depth < 0 else "../" * depth
     url = f"{SITE}/{path}"
     img = og_image or f"{SITE}/assets/og-default.jpg"
     ld = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (extra_ld or []))
@@ -44,7 +44,7 @@ def head(title, desc, path, depth, og_image=None, og_type="website", extra_ld=No
 <title>{html.escape(title)}</title>
 <meta name="description" content="{html.escape(desc)}">
 <link rel="canonical" href="{url}">
-<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="robots" content="{"noindex, follow" if noindex else "index, follow, max-image-preview:large"}">
 <meta property="og:site_name" content="{NAME}">
 <meta property="og:type" content="{og_type}">
 <meta property="og:title" content="{html.escape(title)}">
@@ -58,6 +58,7 @@ def head(title, desc, path, depth, og_image=None, og_type="website", extra_ld=No
 <meta name="theme-color" content="#0f0b1e">
 {FONTS}
 <link rel="stylesheet" href="{up}assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="GTA6 PC news" href="{SITE}/feed.xml">
 <!-- Google AdSense: paste the AdSense <script> tag here once your site is approved -->
 {ld}
 </head>
@@ -329,6 +330,32 @@ for _p in POSTS:
 POSTS = NEW2 + NEW + POSTS + POSTS2 + POSTS4
 BY_SLUG = {q["slug"]: q for q in POSTS}
 
+TOPICS = [
+    ("leaks-and-ports", "Leaks & PC ports", "Cyberleek, the leaked Xbox build, AnyPS5, Leonida, dumps and every unofficial route to GTA 6 on PC.",
+     ["leak", "cyberleek", "leonida", "xbox", "dump", "anyps5", "emulator", "ps5-build", "native-build", "built-for-pc", "modders"]),
+    ("hardware", "PC hardware & performance", "System requirements, file size, frame rates and what kind of PC you'll need for GTA 6.",
+     ["requirements", "file-size", "fps", "best-pc", "system"]),
+    ("guides", "Guides & safety", "How to play GTA 6 on PC today, avoiding scams and fake videos, price, stores and mods.",
+     ["scam", "fake", "remote-play", "vs-console", "price", "steam", "mods"]),
+    ("release-news", "Release date & news", "The GTA 6 PC release date, launch expectations, GTA 6 Online, sales and Take-Two news.",
+     [""]),
+]
+def topic_of(p):
+    for key, name, blurb, words in TOPICS:
+        if any(w and w in p["slug"] for w in words):
+            return key
+    return "release-news"
+TOPIC_NAME = {k: n for k, n, _, _ in TOPICS}
+
+def share_bar(p):
+    from urllib.parse import quote
+    u = quote(f"{SITE}/blog/{p['slug']}/", safe=""); t = quote(p["title"], safe="")
+    links = [("X", f"https://twitter.com/intent/tweet?url={u}&text={t}"),
+             ("Facebook", f"https://www.facebook.com/sharer/sharer.php?u={u}"),
+             ("WhatsApp", f"https://api.whatsapp.com/send?text={t}%20{u}"),
+             ("Reddit", f"https://www.reddit.com/submit?url={u}&title={t}")]
+    return '<div class="share"><span>Share</span>' + "".join(f'<a href="{h}" target="_blank" rel="noopener nofollow">{n}</a>' for n, h in links) + "</div>"
+
 def related_for(p):
     picks = [BY_SLUG[s] for s in p.get("related", []) if s in BY_SLUG]
     for q in POSTS:
@@ -368,7 +395,8 @@ for p in POSTS:
     crumbs_ld = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE}/"},
         {"@type": "ListItem", "position": 2, "name": "Blog", "item": f"{SITE}/blog/"},
-        {"@type": "ListItem", "position": 3, "name": p["h1"], "item": url}]}
+        {"@type": "ListItem", "position": 3, "name": TOPIC_NAME[topic_of(p)], "item": f"{SITE}/blog/topic/{topic_of(p)}/"},
+        {"@type": "ListItem", "position": 4, "name": p["h1"], "item": url}]}
     lds = [article_ld, crumbs_ld]
     if p.get("faq"):
         lds.append({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in p["faq"]]})
@@ -377,12 +405,12 @@ for p in POSTS:
     page = head(p["title"], p["desc"], path, 2, f"{SITE}/assets/blog/{p['slug']}.jpg", "article", lds) + nav(2, "blog") + f'''
 <main>
 <div class="narrow">
-  <div class="crumbs"><a href="../../">Home</a> / <a href="../">Blog</a> / {p["short"]}</div>
+  <div class="crumbs"><a href="../../">Home</a> / <a href="../">Blog</a> / <a href="../topic/{topic_of(p)}/">{TOPIC_NAME[topic_of(p)]}</a></div>
   <article>
     <header>
       <div class="eyebrow">{p["kicker"]}</div>
       <h1 class="display">{p["h1"]}</h1>
-      <div class="byline"><span>By {AUTHOR}</span><span>Published <time datetime="{TODAY}">{TODAY_H}</time></span></div>
+      <div class="byline"><span>By <a href="../../about/">{AUTHOR}</a></span><span>Published <time datetime="{TODAY}">{TODAY_H}</time></span></div>
       <p class="lede">{p["lede"]}</p>
     </header>
     {img_block(p, 2)}
@@ -392,6 +420,7 @@ for p in POSTS:
       <!-- Google AdSense: in-article ad unit can go here -->
       <p class="updated">Last updated <time datetime="{TODAY}">{TODAY_H}</time>. We update this page when Rockstar announces anything new.</p>
       <div class="sources"><h2>Sources</h2><ul>{sources}</ul></div>
+      {share_bar(p)}
     </div>
   </article>
 </div>
@@ -408,7 +437,7 @@ write("blog/index.html", head("GTA 6 PC News: Release Date, Requirements, Native
       "blog/", 1, None, "website", [blog_ld]) + nav(1, "blog") + f'''
 <main class="wrap">
   <div class="page-head"><div class="eyebrow">Blog</div><h1 class="display">GTA 6 PC news</h1>
-  <p>Release date updates, leak coverage and plain-English explainers for everyone waiting on GTA 6 for PC. Every article links to its sources.</p><p style="margin-top:14px">Popular searches: <a href="gta-6-pc-release-date/">release date</a> · <a href="gta-6-pc-system-requirements/">system requirements</a> · <a href="gta-6-pc-download-scams/">PC download</a> · <a href="gta-6-pc-native-build/">native build tracker</a> · <a href="anyps5-gta-6-pc/">AnyPS5</a> · <a href="gta-6-ps5-build-on-pc/">PS5 build on PC</a> · <a href="gta-6-pc-emulator/">emulator</a> · <a href="gta-6-pc-steam/">Steam</a></p></div>
+  <p>Release date updates, leak coverage and plain-English explainers for everyone waiting on GTA 6 for PC. Every article links to its sources.</p><div class="chips">{"".join(f'<a href="topic/{k}/">{n}</a>' for k, n, _, _ in TOPICS)}</div><p style="margin-top:14px">Popular searches: <a href="gta-6-pc-release-date/">release date</a> · <a href="gta-6-pc-system-requirements/">system requirements</a> · <a href="gta-6-pc-download-scams/">PC download</a> · <a href="gta-6-pc-native-build/">native build tracker</a> · <a href="anyps5-gta-6-pc/">AnyPS5</a> · <a href="gta-6-ps5-build-on-pc/">PS5 build on PC</a> · <a href="gta-6-pc-emulator/">emulator</a> · <a href="gta-6-pc-steam/">Steam</a></p></div>
   <div class="grid">{"".join(card(p, 1) for p in POSTS)}</div>
 </main>
 ''' + footer(1) + "\n</body>\n</html>\n")
@@ -431,8 +460,17 @@ simple("about/", "about", "About GTA6 PC", "Who runs GTA6 PC, what we cover and 
 <li>We never link to leaked game files or unofficial downloads.</li>
 <li>We update articles when the facts change and show the date of the last update.</li>
 </ul>
+<h2>Editorial policy</h2>
+<ul>
+<li><strong>Confirmed vs reported:</strong> we only call something confirmed when Rockstar, Take-Two, Sony or Microsoft has said it. Everything else is labeled as a report, a rumor or our estimate.</li>
+<li><strong>Sources:</strong> we link to the original reporting, and we prefer established outlets and official announcements.</li>
+<li><strong>Images:</strong> cover graphics are made by us. Official artwork is credited to Rockstar Games and used for news and commentary.</li>
+<li><strong>No piracy:</strong> we never link to leaked builds, game files, cracks or jailbreak tools, and we warn readers about fake downloads.</li>
+</ul>
+<h2>Corrections</h2>
+<p>If we get something wrong, we fix it and update the article's date. Send corrections to <a href="mailto:contact@gta6pc.buzz">contact@gta6pc.buzz</a> with the article link.</p>
 <h2>Independence</h2>
-<p>GTA6 PC isn't affiliated with Rockstar Games or Take-Two Interactive. The site is supported by advertising.</p>
+<p>GTA6 PC isn't affiliated with Rockstar Games or Take-Two Interactive. The site is supported by advertising, and advertisers have no say over what we write.</p>
 <p>Spotted a mistake? <a href="../contact/">Let us know</a>.</p>
 """)
 
@@ -464,6 +502,96 @@ simple("privacy-policy/", "", "Privacy Policy | GTA6 PC", "How GTA6 PC handles d
 <p>Questions about this policy? Email <a href="mailto:contact@gta6pc.buzz">contact@gta6pc.buzz</a>.</p>
 """)
 
+# topic hub pages
+for key, name, blurb, _ in TOPICS:
+    items = [q for q in POSTS if topic_of(q) == key]
+    path = f"blog/topic/{key}/"
+    ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": f"GTA 6 PC: {name}", "url": f"{SITE}/{path}"}
+    cards = "".join(card(q, 3) for q in items)
+    write(path + "index.html", head(f"GTA 6 PC {name}: All Articles | {NAME}", f"{blurb} {len(items)} sourced articles.", path, 3, None, "website", [ld]) + nav(3, "blog") + f'''
+<main class="wrap">
+  <div class="crumbs"><a href="../../../">Home</a> / <a href="../../">Blog</a> / {name}</div>
+  <div class="page-head" style="padding-top:40px"><div class="eyebrow">Topic</div><h1 class="display">{name}</h1><p>{blurb}</p>
+  <div class="chips">{"".join(f'<a href="../{k}/"{" aria-current=page" if k == key else ""}>{n}</a>' for k, n, _, _ in TOPICS)}</div></div>
+  <div class="grid">{cards}</div>
+</main>
+''' + footer(3) + "\n</body>\n</html>\n")
+write("blog/topic/index.html", head(f"GTA 6 PC Topics | {NAME}", "Browse GTA 6 PC news by topic: leaks and ports, PC hardware, guides and safety, and release date news.", "blog/topic/", 2) + nav(2, "blog") + f'''
+<main class="wrap">
+  <div class="page-head"><div class="eyebrow">Topics</div><h1 class="display">Browse by topic</h1></div>
+  <div class="grid" style="padding-bottom:100px">{"".join(f'<a class="card" href="{k}/"><div class="body"><div class="meta">{len([q for q in POSTS if topic_of(q) == k])} articles</div><h2>{n}</h2><p>{b}</p></div></a>' for k, n, b, _ in TOPICS)}</div>
+</main>
+''' + footer(2) + "\n</body>\n</html>\n")
+
+# RSS feed
+from email.utils import format_datetime
+import datetime
+_pub = format_datetime(datetime.datetime(2026, 11, 23, 12, 0, tzinfo=datetime.timezone.utc))
+rss_items = "".join(f"""  <item><title>{html.escape(q['title'])}</title><link>{SITE}/blog/{q['slug']}/</link><guid>{SITE}/blog/{q['slug']}/</guid><pubDate>{_pub}</pubDate><description>{html.escape(q['desc'])}</description><enclosure url="{SITE}/assets/blog/{q['slug']}.jpg" type="image/jpeg" length="0"/></item>\n""" for q in POSTS)
+write("feed.xml", f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>GTA6 PC news</title>
+  <link>{SITE}/</link>
+  <atom:link href="{SITE}/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>GTA 6 PC release date, leaks, ports and guides.</description>
+  <language>en</language>
+  <lastBuildDate>{_pub}</lastBuildDate>
+{rss_items}</channel>
+</rss>
+""")
+
+# 404 page (served by GitHub Pages for any missing URL, so links are absolute)
+write("404.html", head(f"Page not found | {NAME}", "This page doesn't exist.", "404.html", -1, noindex=True) + nav(-1) + f'''
+<main class="wrap">
+  <div class="page-head"><div class="eyebrow">404</div><h1 class="display">Page not found</h1><p>That page doesn't exist, or it moved. Try one of these instead.</p></div>
+  <div class="grid">{"".join(card(q, 0).replace('href="blog/', 'href="/blog/').replace('src="assets/', 'src="/assets/') for q in POSTS[:6])}</div>
+</main>
+''' + footer(-1) + "\n</body>\n</html>\n")
+
+simple("terms/", "", "Terms of Use | GTA6 PC", "The terms for using the GTA6 PC website.", "Terms of Use", f"""
+<p><em>Last updated {TODAY_H}</em></p>
+<p>By using GTA6 PC ("the site"), you agree to these terms.</p>
+<h2>Use of the site</h2>
+<p>The site is provided for general information about Grand Theft Auto VI and its PC release. You may read, link to and share our articles. You may not copy our articles or graphics in full onto other sites without permission.</p>
+<h2>Accuracy</h2>
+<p>We work to keep articles accurate and up to date, but news about unreleased products changes quickly. Information is provided "as is," without guarantees. Always check official sources before making purchases.</p>
+<h2>External links</h2>
+<p>We link to other websites as sources. We aren't responsible for their content or practices.</p>
+<h2>Trademarks</h2>
+<p>Grand Theft Auto, GTA, Rockstar Games and related marks belong to Take-Two Interactive Software, Inc. and its subsidiaries. PlayStation, Xbox and other product names belong to their owners. Their use here is for identification and commentary only.</p>
+<h2>Advertising</h2>
+<p>The site shows ads from third parties such as Google AdSense. See our <a href="../privacy-policy/">Privacy Policy</a> for how cookies are used.</p>
+<h2>Changes</h2>
+<p>We may update these terms. The date at the top shows the latest version.</p>
+<h2>Contact</h2>
+<p>Questions? Email <a href="mailto:contact@gta6pc.buzz">contact@gta6pc.buzz</a>.</p>
+""")
+
+simple("disclaimer/", "", "Disclaimer | GTA6 PC", "GTA6 PC is an unofficial fan site. Read our disclaimer on affiliation, accuracy and downloads.", "Disclaimer", f"""
+<p><em>Last updated {TODAY_H}</em></p>
+<h2>Unofficial fan site</h2>
+<p>GTA6 PC is an independent, unofficial fan site. It is not affiliated with, endorsed by or sponsored by Rockstar Games, Take-Two Interactive, Sony Interactive Entertainment or Microsoft.</p>
+<h2>No downloads</h2>
+<p>We do not offer, host or link to GTA 6 game files, leaked builds, cracks, emulators loaded with games, or jailbreak tools. Any site claiming to offer a GTA 6 PC download today is not legitimate.</p>
+<h2>Estimates and reports</h2>
+<p>Where we give estimates, such as PC system requirements or install size, they are clearly labeled as estimates. Reports from other outlets are attributed and linked. Only announcements from the companies involved are described as confirmed.</p>
+<h2>Advertising</h2>
+<p>The site is supported by ads. Ads are served by third parties and don't represent an endorsement by us.</p>
+""")
+
+# homepage structured data
+home = os.path.join(ROOT, "index.html")
+h = open(home).read()
+la, lb = "<!--LD-->", "<!--/LD-->"
+if la in h:
+    org = {"@context": "https://schema.org", "@graph": [
+        {"@type": "Organization", "@id": f"{SITE}/#org", "name": NAME, "url": f"{SITE}/", "logo": f"{SITE}/assets/icon-512.png",
+         "email": "contact@gta6pc.buzz"},
+        {"@type": "WebSite", "@id": f"{SITE}/#site", "name": NAME, "url": f"{SITE}/", "publisher": {"@id": f"{SITE}/#org"}, "inLanguage": "en"}]}
+    h = h[:h.index(la) + len(la)] + f'<script type="application/ld+json">{json.dumps(org)}</script>' + h[h.index(lb):]
+    open(home, "w").write(h)
+
 # homepage "latest news" block
 home = os.path.join(ROOT, "index.html")
 h = open(home).read()
@@ -476,9 +604,13 @@ if a in h:
     open(home, "w").write(h)
 
 # sitemap + robots
-urls = ["", "blog/"] + [f"blog/{p['slug']}/" for p in POSTS] + ["about/", "contact/", "privacy-policy/"]
-sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
-    f"  <url><loc>{SITE}/{u}</loc><lastmod>{TODAY}</lastmod></url>\n" for u in urls) + "</urlset>\n"
+urls = ["", "blog/", "blog/topic/"] + [f"blog/topic/{k}/" for k, _, _, _ in TOPICS] + ["about/", "contact/", "privacy-policy/", "terms/", "disclaimer/"]
+def _img(u):
+    return f"<image:image><image:loc>{SITE}/{u}</image:loc></image:image>"
+sm_rows = [f"  <url><loc>{SITE}/</loc><lastmod>{TODAY}</lastmod>{_img('assets/og-default.jpg')}</url>\n"]
+sm_rows += [f"  <url><loc>{SITE}/{u}</loc><lastmod>{TODAY}</lastmod></url>\n" for u in urls[1:]]
+sm_rows += [f"  <url><loc>{SITE}/blog/{q['slug']}/</loc><lastmod>{TODAY}</lastmod>{_img('assets/blog/' + q['slug'] + '.jpg')}</url>\n" for q in POSTS]
+sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n' + "".join(sm_rows) + "</urlset>\n"
 write("sitemap.xml", sm)
 write("robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
 print("ok", len(POSTS), "posts")
