@@ -30,7 +30,12 @@ h1{{font-size:{size}px;margin:16px 0 22px}}
 
 jobs = []
 tmp = tempfile.mkdtemp()
-for p in NEW2 + NEW + POSTS2:
+import importlib
+if len(sys.argv) == 3:  # e.g. render_covers.py posts_daily_20261124_b2 POSTS_DAILY_20261124_B2
+    _todo = getattr(importlib.import_module(sys.argv[1]), sys.argv[2])
+else:
+    _todo = NEW2 + NEW + POSTS2
+for p in _todo:
     c = p.get("cover")
     if not c: continue
     rows = "".join(f'<div class="row{" hot" if hot else ""}"><span class="l">{html.escape(l)}</span><span class="v">{html.escape(v)}</span></div>' for l, v, hot in c["rows"])
