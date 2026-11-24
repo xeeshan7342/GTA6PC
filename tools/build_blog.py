@@ -326,6 +326,7 @@ from posts_daily_20261124_b1 import POSTS_DAILY_20261124_B1
 from posts_daily_20261124_b2 import POSTS_DAILY_20261124_B2
 from posts_daily_20261124_b2_muse import POSTS_DAILY_20261124_B2_MUSE
 from posts_daily_20261124_b3 import POSTS_DAILY_20261124_B3
+from posts_daily_20261124_b4 import POSTS_DAILY_20261124_B4
 RELATED = {
     "gta-6-pc-release-date": ["gta-6-pc-vs-console", "rockstar-pc-ports-history", "gta-6-pc-price"],
     "gta-6-pc-launch": ["gta-6-pc-system-requirements", "gta-6-pc-price", "gta-6-pc-mods-fivem"],
@@ -336,7 +337,7 @@ RELATED = {
 for _p in POSTS:
     _p.setdefault("related", RELATED.get(_p["slug"], []))
 # Newest first, so the homepage and blog index lead with the latest news.
-POSTS = POSTS_DAILY_20261124_B3 + POSTS_DAILY_20261124_B2_MUSE + POSTS_DAILY_20261124_B1 + POSTS_DAILY_20261124_B2 + NEW2 + NEW + POSTS + POSTS2 + POSTS4 + POSTS_DAILY_20261123_B2 + POSTS_DAILY_20261123_B3 + POSTS_DAILY_20261123_B4 + POSTS_DAILY_20261123_B5
+POSTS = POSTS_DAILY_20261124_B4 + POSTS_DAILY_20261124_B3 + POSTS_DAILY_20261124_B2_MUSE + POSTS_DAILY_20261124_B1 + POSTS_DAILY_20261124_B2 + NEW2 + NEW + POSTS + POSTS2 + POSTS4 + POSTS_DAILY_20261123_B2 + POSTS_DAILY_20261123_B3 + POSTS_DAILY_20261123_B4 + POSTS_DAILY_20261123_B5
 BY_SLUG = {q["slug"]: q for q in POSTS}
 
 TOPICS = [
