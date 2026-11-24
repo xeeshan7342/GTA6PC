@@ -59,7 +59,7 @@ def head(title, desc, path, depth, og_image=None, og_type="website", extra_ld=No
 {FONTS}
 <link rel="stylesheet" href="{up}assets/site.css">
 <link rel="alternate" type="application/rss+xml" title="GTA6 PC news" href="{SITE}/feed.xml">
-<!-- Google AdSense: paste the AdSense <script> tag here once your site is approved -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088404924117690" crossorigin="anonymous"></script>
 {ld}
 </head>
 <body>
