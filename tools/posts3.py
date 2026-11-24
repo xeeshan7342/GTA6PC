@@ -106,15 +106,15 @@ sources=[
 dict(
 slug="cyberleek-gta-6-executable",
 short="Cyberleek exe",
-title="Did Cyberleek Release the GTA 6 Executable? (November 23 Update)",
-h1="Did Cyberleek release the GTA 6 executable?",
-desc="Cyberleek promised to release the missing GTA 6 Xbox executable on November 23, tied to its crypto token. Here's the latest status and what it would and wouldn't change.",
+title="Cyberleek Released the GTA 6 Executable (November 24 Update)",
+h1="Did Cyberleek release the GTA 6 executable? Yes.",
+desc="Cyberleek released the missing GTA 6 Xbox executable on November 23, 2026, and modders booted the game on PC within hours. Here is what happened and what it did and did not change.",
 kicker="Leak update",
-lede="The hacker group Cyberleek said it would release the missing piece of its leaked GTA 6 Xbox build, the main executable, on November 23. Here's where things stand.",
-tldr="As of November 23, 2026, <strong>there's no confirmed report that Cyberleek has released the GTA 6 executable</strong>. Even if it does, the build is <strong>unverified</strong>, running it on PC would still need major work, and <strong>downloading it is risky and illegal</strong>.",
+lede="Cyberleek did release the missing piece of its leaked GTA 6 Xbox build, the main executable, on November 23, 2026. Within about three hours, modders had the game booting on a Windows PC. Here is what happened, and what it did and did not change.",
+tldr="Update, November 24, 2026: Cyberleek <strong>did release the GTA 6 executable</strong> on November 23, and modders <strong>booted the game on PC within about three hours</strong>, reaching only the settings screens, with no gameplay. The build is still <strong>unverified</strong>, and <strong>downloading it is risky and illegal</strong>. Full story in our <a href=\"../gta-6-boots-on-pc-executable-leak/\">boot report</a>.",
 related=["gta-6-pc-leak", "leonida-gta-6-recompilation", "gta-6-pc-download-scams"],
-cover=dict(eyebrow="Leak update · Nov 23", title="Cyberleek & the GTA 6 exe", sub="Promised for today. Not confirmed released.",
-           rows=[("Xbox build (leak)", "~200 GB", False), ("Main executable", "Withheld", True), ("Promised date", "Nov 23", False), ("Release confirmed", "No", True), ("Build verified", "No", True)]),
+cover=dict(eyebrow="Leak update · Nov 24", title="Cyberleek & the GTA 6 exe", sub="Released Nov 23. Game booted on PC hours later.",
+           rows=[("Xbox build (leak)", "~200 GB", False), ("Main executable", "Released Nov 23", True), ("Booted on PC", "yes, in ~3 hrs", True), ("Gameplay", "none yet", True)]),
 body="""
 <h2>Quick recap</h2>
 <p>Around GTA 6's console launch, Cyberleek posted what it called a near-complete November 2026 Xbox build of the game, around 200 GB. It held back one file, the main executable, without which nothing can run. Full background in our <a href="../gta-6-pc-leak/">leak explainer</a>.</p>
@@ -124,11 +124,11 @@ body="""
 <p>Tying a leak to a token price is a big red flag. It suggests the hype is at least partly about pumping the token.</p>
 
 <h2>Has it happened?</h2>
-<p>At the time of writing, we haven't found any reliable report confirming the executable was released, or that the build is genuine. We'll update this page as soon as there's credible news.</p>
+<p>Yes. Cyberleek released the executable on November 23, 2026, as promised, and within about three hours modders had the game booting on a Windows PC, reaching the initial settings screens with no gameplay. Full story in our <a href="../gta-6-boots-on-pc-executable-leak/">boot report</a>. The build is still unverified, and the release changed less than the hype suggested, as the next section explains.</p>
 
-<h2>What would change if it's released?</h2>
+<h2>What changed now that it is released?</h2>
 <ul>
-<li><strong>It still wouldn't be playable on PC.</strong> An Xbox executable doesn't run on Windows as-is. Projects like <a href="../leonida-gta-6-recompilation/">Leonida</a> would need to recompile it, and Xbox-only system functions would need to be rebuilt.</li>
+<li><strong>It still isn't playable on PC.</strong> An Xbox executable doesn't run on Windows as-is. The main project working on it, <a href="../leonida-gta-6-recompilation/">Leonida</a>, shut down on November 24, the day after the release. See our <a href="../gta-6-pc-port-rockstar-crackdown/">crackdown report</a>.</li>
 <li><strong>Encryption could be cracked.</strong> The game's files are reported to be encrypted with a key tied to the executable.</li>
 <li><strong>A flood of fakes is guaranteed.</strong> Whatever happens, expect fake "GTA 6 PC exe" downloads loaded with malware.</li>
 </ul>
@@ -142,6 +142,8 @@ sources=[
 ("VGC: Cyberleek claims to release development build of GTA 6", "https://www.videogameschronicle.com/news/cyberleek-claims-to-release-development-build-of-gta-6/"),
 ("RockstarINTEL: Could this major GTA VI leak make it playable on PC?", "https://rockstarintel.com/could-this-major-gta-vi-leak-make-it-playable-on-pc/"),
 ("XDA: GTA 6's notorious leaker claims to have released a dumped Xbox build", "https://www.xda-developers.com/gta-6s-notorious-leaker-claims-to-have-released-dumped-xbox-build-on-internet/"),
+("TweakTown: GTA 6 boots on PC only 3 hours after Xbox executable leaked", "https://www.tweaktown.com/news/114839/gta-6-boots-on-pc-only-3-hours-after-xbox-executable-leaked/index.html"),
+("TechSpot: GTA 6 leaker releases Xbox build executable, and modders say a PC port already boots", "https://www.techspot.com/news/114672-gta-6-leaker-releases-xbox-build-executable-modders.html"),
 ],
 ),
 dict(
@@ -149,14 +151,16 @@ slug="leonida-gta-6-recompilation",
 short="Leonida project",
 title="Leonida: The GTA 6 Xbox-to-PC Recompilation Project Explained",
 h1="Leonida: the GTA 6 Xbox-to-PC recompilation project, explained",
-desc="Leonida is an open-source project trying to recompile GTA 6's Xbox version to run natively on PC. It has translated 26,503 shaders, but the game doesn't boot yet.",
+desc="Leonida was an open-source project that tried to recompile GTA 6's Xbox version to run natively on PC. It translated 26,503 shaders, but the game never booted, and the project shut down on November 24, 2026.",
 kicker="Fan project",
-lede="Of all the projects that popped up after the GTA 6 Xbox leak, Leonida is the one getting the most attention. Here's what it is, what it's achieved, and why it can't run GTA 6 yet.",
-tldr="Leonida is an <strong>open-source static recompilation project</strong> aiming to run GTA 6's Xbox Series version natively on PC. It has <strong>translated 26,503 shaders to Vulkan's SPIR-V format</strong>, but <strong>the game doesn't boot</strong>, and it lacks the main executable. It doesn't distribute game files.",
+lede="Of all the projects that popped up after the GTA 6 Xbox leak, Leonida got the most attention, until it shut down on November 24, 2026. Here is what it was, what it achieved, and why it never ran GTA 6.",
+tldr="Update, November 24, 2026: Leonida has <strong>shut down</strong>. Its developer stepped away, its GitHub page is no longer accessible and its Discord server was taken down. Before that, the project had <strong>translated 26,503 shaders to Vulkan's SPIR-V format</strong>, but <strong>the game never booted</strong> through Leonida. Full story in our <a href=\"../gta-6-pc-port-rockstar-crackdown/\">crackdown report</a>.",
 related=["gta-6-xbox-build-on-pc", "anyps5-gta-6-pc", "gta-6-built-for-pc"],
-cover=dict(eyebrow="Fan project · Xbox → PC", title="Leonida explained", sub="Recompiling GTA 6's Xbox version for PC. Not booting yet.",
-           rows=[("Approach", "Static recompilation", False), ("Shaders translated", "26,503", False), ("Asset extraction", "Partly working", False), ("Executable", "Missing", True), ("Boots GTA 6", "No", True)]),
+cover=dict(eyebrow="Fan project · Xbox → PC", title="Leonida explained", sub="Shut down Nov 24 after the exe leak. The game never booted through it.",
+           rows=[("Approach", "Static recompilation", False), ("Shaders translated", "26,503", False), ("Status", "Shut down Nov 24", True), ("Boots GTA 6", "No", True)]),
 body="""
+<p><strong>Update, November 24, 2026:</strong> Leonida has shut down. Its main developer stepped away, citing circumstances beyond his control, and the project's GitHub page and Discord server are gone. The rest of this article explains what the project was and what it achieved. Full story in our <a href="../gta-6-pc-port-rockstar-crackdown/">crackdown report</a>.</p>
+
 <h2>What Leonida is</h2>
 <p>Leonida is an open-source project, named after GTA 6's fictional state, that wants to run the Xbox Series version of GTA 6 natively on Windows. It's often called an "emulator," but it isn't one. It uses <strong>static recompilation</strong>, translating the game's code into a PC program ahead of time instead of emulating an entire Xbox. We explain the difference in <a href="../gta-6-built-for-pc/">Is GTA 6 built for PC?</a></p>
 
@@ -170,7 +174,7 @@ body="""
 <h2>What it can't do yet</h2>
 <ul>
 <li><strong>The game doesn't boot.</strong> The project's own developers say so.</li>
-<li><strong>It lacks the executable.</strong> The leaked Xbox build is missing its main program file. Cyberleek promised it for November 23, but it hasn't been confirmed. See our <a href="../cyberleek-gta-6-executable/">Cyberleek update</a>.</li>
+<li><strong>It never booted the game.</strong> The project's own developers said so, and the executable only arrived on November 23, the day before the project shut down. See our <a href="../cyberleek-gta-6-executable/">Cyberleek update</a> and our <a href="../gta-6-pc-port-rockstar-crackdown/">crackdown report</a>.</li>
 <li><strong>Xbox system functions</strong> still need to be rebuilt for Windows.</li>
 </ul>
 
