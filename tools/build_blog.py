@@ -77,6 +77,7 @@ kicker="Release date",
 lede="GTA 6 launched on consoles on November 19, 2026. PC players are still waiting, and Rockstar hasn't said for how long. Here's everything that's actually known.",
 img_alt="GTA 6 PC release date status graphic showing the reported Q1 2027 window",
 tldr="There is <strong>no official GTA 6 PC release date</strong>. Rockstar has only released the game on PS5 and Xbox Series X|S. A GamesBeat report from October 2026 says Rockstar is aiming for <strong>the first quarter of 2027</strong>, but Rockstar hasn't confirmed it.",
+faq=[("When is GTA 6 coming to PC?", "There is no official date. Rockstar has only announced GTA 6 for PlayStation 5 and Xbox Series X|S. A GamesBeat report from October 13, 2026 says Rockstar is aiming for the first quarter of 2027, but Rockstar has not confirmed it."), ("What did Take-Two say about a PC version on November 9?", "On the November 9, 2026 earnings call, chief executive Strauss Zelnick was asked about PC and other platforms and said information about new versions always comes from Take-Two's labels, meaning Rockstar. He gave no date and announced nothing."), ("Could the leak bring the PC version forward?", "Some commentators in South Korea have suggested the Xbox build leak could push Rockstar to release the PC version earlier, but that is speculation. Nothing official supports it, and Take-Two's release table through March 2027 lists no PC version."), ("Is the Q1 2027 window reliable?", "It is the most specific window in circulation, from four anonymous industry sources cited by GamesBeat, and the outlet stood by it in a November 18 update. It is still a report, not an announcement, and GTA 6 has already slipped twice."), ("Where will the PC date be announced?", "Rockstar announces release dates on the Rockstar Newswire and its official social accounts. Store pages on Steam, the Epic Games Store and the Rockstar Games Launcher usually appear around the same time.")],
 body="""
 <h2>What Rockstar has officially said</h2>
 <p>Rockstar has only ever announced GTA 6 for PlayStation 5 and Xbox Series X|S. The game went through two delays before it shipped: first from 2025 to May 26, 2026, then to November 19, 2026, when it finally launched on both consoles.</p>
@@ -104,6 +105,14 @@ body="""
 <h2>Be careful with "GTA 6 PC download" sites</h2>
 <p>A leaked Xbox build started circulating around the console launch, and sites offering GTA 6 PC downloads, installers or "ports" followed right behind it. There is no legitimate way to play GTA 6 on PC yet. Those downloads are at best unofficial and at worst malware. We cover this in more detail in our <a href="../gta-6-pc-leak/">GTA 6 PC leak explainer</a>.</p>
 
+<h2>What Take-Two said on November 9</h2>
+<p>Take-Two reported its fiscal second-quarter results on November 9, 2026, ten days before launch. Pre-orders were "far in excess" of the company's initial expectations, according to chief executive Strauss Zelnick. On the earnings call that evening, Zelnick was asked about a PC version, a Switch 2 version and streaming, and he gave no date. His answer, reported by several outlets, was that information about new versions always comes from Take-Two's labels, meaning Rockstar. Any PC announcement will come from Rockstar itself, not from Take-Two's investor calls.</p>
+<p>The Q1 2027 report still stands. GamesBeat updated its October 13 report on November 18, and the window still reads the first quarter of 2027. But there is a point against it too: Take-Two's own fiscal 2027 release table, which runs to March 31, 2027, lists no PC version of GTA 6, and a January to March launch would fall inside that year. The next official checkpoint is Take-Two's third-quarter call, expected around early February 2027.</p>
+
+<h2>Could the leak bring the PC date forward?</h2>
+<p>South Korean outlets covering the leak have raised the idea. Chosun Biz reported on November 25 that the leaked Xbox build raises the prospect of an unofficial PC version, and that some expect Rockstar to bring the official PC release forward to the first quarter of next year. Aju Press made the same point the same day, noting that an unofficial version could reach PC-heavy markets long before any official release.</p>
+<p>That is speculation, not a report of a decision, and nothing official supports it. Rockstar and Take-Two have said nothing about changing their plans because of the leak. There is an older hint pointing the same way, though. In February 2025, Corsair Gaming chief executive Andrew Paul told investors he expected GTA 6 to arrive in early 2026, when the console game was still targeting autumn 2025. The console launch slipped a year, but Wccftech notes the logic still fits: the industry has expected a fast PC release for a while. VGC's Andy Robinson has also said rising console prices are pressuring Rockstar to get the PC version out earlier than usual. None of that is a date, but it explains why the Q1 2027 window keeps coming up.</p>
+
 <h2>Quick answers</h2>
 <h3>Is GTA 6 on Steam?</h3>
 <p>Not yet. Rockstar hasn't announced any PC store listing.</p>
@@ -111,12 +120,28 @@ body="""
 <p>No. There's no official PC pre-order. Any site taking PC pre-orders right now isn't selling a real product.</p>
 <h3>Will my console save carry over to PC?</h3>
 <p>Rockstar hasn't said. When GTA V moved to PC, players could transfer their GTA Online progress, but nothing is confirmed for GTA 6.</p>
+<h3>When is GTA 6 coming to PC?</h3>
+<p>There is no official date. Rockstar has only announced GTA 6 for PlayStation 5 and Xbox Series X|S. A GamesBeat report from October 13, 2026 says Rockstar is aiming for the first quarter of 2027, but Rockstar has not confirmed it.</p>
+<h3>What did Take-Two say about a PC version on November 9?</h3>
+<p>On the November 9, 2026 earnings call, chief executive Strauss Zelnick was asked about PC and other platforms and said information about new versions always comes from Take-Two's labels, meaning Rockstar. He gave no date and announced nothing.</p>
+<h3>Could the leak bring the PC version forward?</h3>
+<p>Some commentators in South Korea have suggested the Xbox build leak could push Rockstar to release the PC version earlier, but that is speculation. Nothing official supports it, and Take-Two's release table through March 2027 lists no PC version.</p>
+<h3>Is the Q1 2027 window reliable?</h3>
+<p>It is the most specific window in circulation, from four anonymous industry sources cited by GamesBeat, and the outlet stood by it in a November 18 update. It is still a report, not an announcement, and GTA 6 has already slipped twice.</p>
+<h3>Where will the PC date be announced?</h3>
+<p>Rockstar announces release dates on the Rockstar Newswire and its official social accounts. Store pages on Steam, the Epic Games Store and the Rockstar Games Launcher usually appear around the same time.</p>
 """,
 sources=[
 ("GamesBeat: Grand Theft Auto VI's PC release is slated for Q1 2027", "https://gamesbeat.com/grand-theft-auto-vis-pc-release-is-slated-for-q1-2027/"),
 ("VGC: GTA 6 PC release date guide", "https://www.videogameschronicle.com/guide/gta-6-pc-version/"),
 ("PCWorld: We guessed late 2027 for GTA 6 on PC, a report says Q1 2027", "https://www.pcworld.com/article/3260660/we-guessed-late-2027-for-gta-6-on-pc-a-report-says-q1-2027.html"),
 ("Yahoo Tech: GTA 6 PC release date", "https://tech.yahoo.com/gaming/articles/gta-6-pc-release-date-150338948.html"),
+("VGC: The PC version of GTA 6 is reportedly coming before the end of March 2027", "https://www.videogameschronicle.com/news/the-pc-version-of-grand-theft-auto-6-is-reportedly-coming-before-the-end-of-march-2027/"),
+("Chosun Biz: GTA 6 leak raises prospect of unofficial PC port and earlier official release", "https://biz.chosun.com/en/en-it/2026/11/25/CUNAZ7EHNRDODCVOZ4JV5MBC6M/"),
+("Aju Press: Hacker leak opens door to unofficial GTA 6 PC port", "https://www.ajupress.com/view/20261125092504279"),
+("Wccftech: Corsair CEO's early GTA 6 PC release hint looks prescient", "https://wccftech.com/corsair-ceo-gta-6-pc-release-hint-gamesbeat-q1-2027/amp/"),
+("Hone: GTA 6 PC release date, November 9 earnings call", "https://hone.gg/blog/gta-6-pc-release-date"),
+("Sixshore: Take-Two says GTA 6 pre-orders are far above its expectations", "https://sixshore.com/news/take-two-q2-fy27-gta6-preorders/"),
 ],
 ),
 dict(
@@ -329,6 +354,7 @@ from posts_daily_20261124_b3 import POSTS_DAILY_20261124_B3
 from posts_daily_20261124_b4 import POSTS_DAILY_20261124_B4
 from posts_daily_20261124_b5 import POSTS_DAILY_20261124_B5
 from posts_daily_20261125_b1 import POSTS_DAILY_20261125_B1
+from posts_daily_20261125_b2 import POSTS_DAILY_20261125_B2
 RELATED = {
     "gta-6-pc-release-date": ["gta-6-pc-vs-console", "rockstar-pc-ports-history", "gta-6-pc-price"],
     "gta-6-pc-launch": ["gta-6-pc-system-requirements", "gta-6-pc-price", "gta-6-pc-mods-fivem"],
@@ -339,7 +365,7 @@ RELATED = {
 for _p in POSTS:
     _p.setdefault("related", RELATED.get(_p["slug"], []))
 # Newest first, so the homepage and blog index lead with the latest news.
-POSTS = POSTS_DAILY_20261125_B1 + POSTS_DAILY_20261124_B5 + POSTS_DAILY_20261124_B4 + POSTS_DAILY_20261124_B3 + POSTS_DAILY_20261124_B2_MUSE + POSTS_DAILY_20261124_B1 + POSTS_DAILY_20261124_B2 + NEW2 + NEW + POSTS + POSTS2 + POSTS4 + POSTS_DAILY_20261123_B2 + POSTS_DAILY_20261123_B3 + POSTS_DAILY_20261123_B4 + POSTS_DAILY_20261123_B5
+POSTS = POSTS_DAILY_20261125_B2 + POSTS_DAILY_20261125_B1 + POSTS_DAILY_20261124_B5 + POSTS_DAILY_20261124_B4 + POSTS_DAILY_20261124_B3 + POSTS_DAILY_20261124_B2_MUSE + POSTS_DAILY_20261124_B1 + POSTS_DAILY_20261124_B2 + NEW2 + NEW + POSTS + POSTS2 + POSTS4 + POSTS_DAILY_20261123_B2 + POSTS_DAILY_20261123_B3 + POSTS_DAILY_20261123_B4 + POSTS_DAILY_20261123_B5
 BY_SLUG = {q["slug"]: q for q in POSTS}
 
 TOPICS = [
