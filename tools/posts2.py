@@ -109,10 +109,10 @@ slug="gta-6-online-pc",
 short="GTA 6 Online",
 title="GTA 6 Online on PC: Release Date and What We Know",
 h1="GTA 6 Online on PC: release date and what we know",
-desc="GTA 6 launched without an online mode. Reports point to a 2027 release for GTA 6 Online. Here's what that means for PC players and GTA Online.",
+desc="GTA 6 launched on November 19, 2026 without an online mode, and Rockstar has still announced none. Reports point to a 2027 release for GTA 6 Online. Here is the launch picture, the hints in the game files, and what it means for PC players.",
 kicker="Online",
 lede="GTA 6 launched as a single-player game. The online mode that made GTA V a decade-long hit hasn't arrived yet, on any platform.",
-tldr="<strong>GTA 6 Online has no release date.</strong> Bloomberg reported in October 2026 that it's expected in <strong>2027</strong>, but Rockstar hasn't announced it. PC players will need the PC version first, which is reported for early 2027.",
+tldr="<strong>GTA 6 Online has no release date.</strong> Bloomberg reported in October 2026 that it is expected in <strong>2027</strong>, but Rockstar has not announced it. The game launched on November 19, 2026 as a single-player experience, with more than <strong>39 million players</strong> in the first four days on PS5 alone. PC players will need the PC version first, which is reported for early 2027.",
 related=["gta-6-pc-release-date", "gta-6-pc-mods-fivem", "gta-6-pc-launch"],
 cover=dict(eyebrow="Online mode · status", title="GTA 6 Online on PC", sub="Launched single-player only. Online is reported for 2027.",
            rows=[("GTA 6 story mode", "Out on console", False), ("GTA 6 Online", "Not announced", True), ("Reported window", "2027", True), ("GTA Online (V)", "Still supported", False)]),
@@ -137,12 +137,26 @@ body="""
 
 <h2>What about roleplay servers?</h2>
 <p>Many PC players spend their GTA time on roleplay servers rather than GTA Online. Rockstar bought the team behind FiveM in 2023, which hints at plans for GTA 6 roleplay. We cover that in <a href="../gta-6-pc-mods-fivem/">GTA 6 mods and FiveM on PC</a>.</p>
+
+<h2>What changed since launch</h2>
+<p>The launch itself was enormous, and it stayed single-player. PlayStation Blog's November 23 launch post says more than 39 million unique players played GTA 6 on PlayStation 5, logging 683 million hours in the launch window from November 19 to November 22, a PlayStation record for concurrent players. All of that play was in the story mode. No online mode appeared at launch, and Rockstar has announced none since.</p>
+<p>GTA Online, meanwhile, is still running its weekly events and bonuses. The first bonus week after GTA 6's release has already gone live, and the latest major update, The Kortz Center Heist, came out on July 14, 2026. If you want to play a GTA online mode on PC today, the current GTA Online is still the only option, and it is playable on PC.</p>
+
+<h2>Hints in the game files</h2>
+<p>Nothing below comes from Rockstar, and none of it gives a date. But several finds point the same way, and they are worth knowing about as long as they are labelled as hints, not announcements.</p>
+<p>On November 9, 2026, the game's PlayStation database entry was found to include the strings joinSession, launchActivity and launchMultiplayerActivity. Those are the kind of labels a game uses for online sessions, so the find suggests online features are in the works. It says nothing about a date, and database strings are not a product announcement. Insiders who looked at the GTA 6 install also report that the story portion installs separately, which some read as a hint at a separate online module. Rockstar has not announced anything like that, and a separate install could have other explanations, such as download size management. The game's ESRB rating has no "Users Interact" notice, the label given to games where players can communicate with each other.</p>
+
+<h2>Crossplay and cross-progression</h2>
+<p>Rockstar has said nothing about crossplay between PS5 and Xbox Series X|S, and with no online mode announced there is nothing to cross yet. The same goes for cross-progression: no statement, no announced transfer of saves or characters between platforms. Rockstar has never shipped crossplay in any of its online games. GTA Online has no crossplay between any of its platforms, and neither does Red Dead Online or Max Payne 3. If GTA 6 Online does arrive, expect it to start on consoles only, with no crossplay, and for the PC question to wait until Rockstar announces a PC version.</p>
+<p>The GTA+ month that comes with digital pre-orders is not a GTA 6 online pass, and it does not imply an online mode is coming. It is a subscription benefit for the existing GTA Online. Rockstar has also not said whether characters, money or vehicles from GTA Online will carry over to a future GTA 6 online mode, so there is no official word that a transfer is planned.</p>
 """,
 sources=[
 ("Digital Trends: GTA VI's online mode could arrive in 2027", "https://digitaltrends.com/gaming/gta-vis-online-mode-could-arrive-in-2027-well-after-the-single-player-campaign-begins/"),
 ("Digital Trends: Yet another report claims GTA 6 online arrives next year", "https://digitaltrends.com/gaming/yet-another-report-claims-gta-6-online-multiplayer-experience-arrives-next-year"),
 ("Beebom: Rockstar has GTA 6's online mode planned for 2027", "https://beebom.com/rockstar-has-gta-6-online-mode-planned-for-2027/"),
 ("GamesBeat: Grand Theft Auto VI's PC release is slated for Q1 2027", "https://gamesbeat.com/grand-theft-auto-vis-pc-release-is-slated-for-q1-2027/"),
+("Pixel Herald: Is GTA 6 cross-platform? Crossplay explained", "https://pixelherald.com/is-gta-6-cross-platform-ps5-and-xbox-crossplay-explained/"),
+("GTA Guide: GTA 6 Online release date, is GTA Online 2 coming?", "http://gta.guide/gta-6/guides/gta-6-online-release-date"),
 ],
 ),
 dict(
