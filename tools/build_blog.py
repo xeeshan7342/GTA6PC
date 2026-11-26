@@ -5,8 +5,8 @@ ROOT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(__file
 SITE = "https://gta6pc.buzz"   # replace once the domain is bought
 NAME = "GTA6 PC"
 AUTHOR = "GTA6 PC Editorial"
-TODAY = "2026-11-25"
-TODAY_H = "November 25, 2026"
+TODAY = "2026-11-26"
+TODAY_H = "November 26, 2026"
 
 FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800;125,900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">'
 
@@ -357,6 +357,7 @@ from posts_daily_20261125_b1 import POSTS_DAILY_20261125_B1
 from posts_daily_20261125_b2 import POSTS_DAILY_20261125_B2
 from posts_daily_20261125_b3 import POSTS_DAILY_20261125_B3
 from posts_daily_20261125_b5 import POSTS_DAILY_20261125_B5
+from posts_daily_20261126_b1 import POSTS_DAILY_20261126_B1
 RELATED = {
     "gta-6-pc-release-date": ["gta-6-pc-vs-console", "rockstar-pc-ports-history", "gta-6-pc-price"],
     "gta-6-pc-launch": ["gta-6-pc-system-requirements", "gta-6-pc-price", "gta-6-pc-mods-fivem"],
@@ -367,7 +368,7 @@ RELATED = {
 for _p in POSTS:
     _p.setdefault("related", RELATED.get(_p["slug"], []))
 # Newest first, so the homepage and blog index lead with the latest news.
-POSTS = POSTS_DAILY_20261125_B5 + POSTS_DAILY_20261125_B3 + POSTS_DAILY_20261125_B2 + POSTS_DAILY_20261125_B1 + POSTS_DAILY_20261124_B5 + POSTS_DAILY_20261124_B4 + POSTS_DAILY_20261124_B3 + POSTS_DAILY_20261124_B2_MUSE + POSTS_DAILY_20261124_B1 + POSTS_DAILY_20261124_B2 + NEW2 + NEW + POSTS + POSTS2 + POSTS4 + POSTS_DAILY_20261123_B2 + POSTS_DAILY_20261123_B3 + POSTS_DAILY_20261123_B4 + POSTS_DAILY_20261123_B5
+POSTS = POSTS_DAILY_20261126_B1 + POSTS_DAILY_20261125_B5 + POSTS_DAILY_20261125_B3 + POSTS_DAILY_20261125_B2 + POSTS_DAILY_20261125_B1 + POSTS_DAILY_20261124_B5 + POSTS_DAILY_20261124_B4 + POSTS_DAILY_20261124_B3 + POSTS_DAILY_20261124_B2_MUSE + POSTS_DAILY_20261124_B1 + POSTS_DAILY_20261124_B2 + NEW2 + NEW + POSTS + POSTS2 + POSTS4 + POSTS_DAILY_20261123_B2 + POSTS_DAILY_20261123_B3 + POSTS_DAILY_20261123_B4 + POSTS_DAILY_20261123_B5
 BY_SLUG = {q["slug"]: q for q in POSTS}
 
 TOPICS = [
