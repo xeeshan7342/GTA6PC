@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA 6 on PC Gets Ray-Traced Lighting: DexNom, Belobug and the 13 FPS Forks</title>
+<meta name="description" content="The AMD forks of VIctory now run GTA 6 with experimental ray-traced lighting on PC, and a combined fork reports 13 to 22 fps. The game is still far from playable, and every figure comes from single-machine tests.">
+<link rel="canonical" href="https://gta6pc.buzz/blog/gta-6-pc-port-ray-tracing-dexnom/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:site_name" content="GTA6 PC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GTA 6 on PC Gets Ray-Traced Lighting: DexNom, Belobug and the 13 FPS Forks">
+<meta property="og:description" content="The AMD forks of VIctory now run GTA 6 with experimental ray-traced lighting on PC, and a combined fork reports 13 to 22 fps. The game is still far from playable, and every figure comes from single-machine tests.">
+<meta property="og:url" content="https://gta6pc.buzz/blog/gta-6-pc-port-ray-tracing-dexnom/">
+<meta property="og:image" content="https://gta6pc.buzz/assets/blog/gta-6-pc-port-ray-tracing-dexnom.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0f0b1e">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800;125,900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="GTA6 PC news" href="https://gta6pc.buzz/feed.xml">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088404924117690" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "GTA 6 on PC Gets Ray-Traced Lighting: DexNom, Belobug and the 13 FPS Forks", "description": "The AMD forks of VIctory now run GTA 6 with experimental ray-traced lighting on PC, and a combined fork reports 13 to 22 fps. The game is still far from playable, and every figure comes from single-machine tests.", "image": ["https://gta6pc.buzz/assets/blog/gta-6-pc-port-ray-tracing-dexnom.jpg"], "datePublished": "2026-11-26", "dateModified": "2026-11-26", "author": {"@type": "Organization", "name": "GTA6 PC Editorial", "url": "https://gta6pc.buzz/about/"}, "publisher": {"@type": "Organization", "name": "GTA6 PC", "url": "https://gta6pc.buzz"}, "mainEntityOfPage": "https://gta6pc.buzz/blog/gta-6-pc-port-ray-tracing-dexnom/"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gta6pc.buzz/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://gta6pc.buzz/blog/"}, {"@type": "ListItem", "position": 3, "name": "PC hardware & performance", "item": "https://gta6pc.buzz/blog/topic/hardware/"}, {"@type": "ListItem", "position": 4, "name": "GTA 6 on PC gets ray-traced lighting", "item": "https://gta6pc.buzz/blog/gta-6-pc-port-ray-tracing-dexnom/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does GTA 6 on PC have ray tracing now?", "acceptedAnswer": {"@type": "Answer", "text": "Experimentally, yes, in one fork. DexNom RayTime runs the game's ray tracing as an experimental mode on a Radeon RX 7900 XTX, at about 1 frame per second. With ray tracing off it reports 3.5 to 4 fps. PortWatch says it has seen the ray-traced lighting working."}}, {"@type": "Question", "name": "Which GTA 6 PC port fork is fastest?", "acceptedAnswer": {"@type": "Answer", "text": "By reported numbers, VIctory-7900XTX, which claims 13 to 22 fps in most scenes at 1440p on a Radeon RX 7900 XTX. The claim comes from its own README, PortWatch says its owner verified an average of about 16 fps, and nobody else has reproduced it."}}, {"@type": "Question", "name": "What is DexNom RayTime?", "acceptedAnswer": {"@type": "Answer", "text": "DexNom RayTime is an AMD-focused fork of the VIctory compatibility layer, built on the victory-world-runtime base. It was called DexNom Runtime until November 26, 2026, when its README renamed it. PortWatch rates it first at 78 percent."}}, {"@type": "Question", "name": "What frame rate does the private CGBJ build claim?", "acceptedAnswer": {"@type": "Answer", "text": "PortWatch reported on November 26 that CGBJ averages 25 fps in gameplay on an NVIDIA card with 16 GB of video memory, with interiors and cutscenes near 30 fps. The build is private, its code is not public, and no session length was given, so the claim is unverified."}}, {"@type": "Question", "name": "Can I play GTA 6 on PC now?", "acceptedAnswer": {"@type": "Answer", "text": "No. No project has a verified playable build. The fastest public forks run at 13 to 22 fps in light scenes and much less in busy ones, with flicker, missing textures and crashes, and they need the leaked Xbox build to run at all."}}]}</script>
+</head>
+<body>
+<nav><div class="wrap">
+  <a href="../../" class="logo">GTA6<b>PC</b></a>
+  <div class="nav-links"><a href="../../" class="hide-sm">Home</a><a href="../../blog/" aria-current="page">Blog</a><a href="../../about/">About</a><a href="../../contact/" class="hide-sm">Contact</a></div>
+</div></nav>
+<main>
+<div class="narrow">
+  <div class="crumbs"><a href="../../">Home</a> / <a href="../">Blog</a> / <a href="../topic/hardware/">PC hardware & performance</a></div>
+  <article>
+    <header>
+      <div class="eyebrow">PC ports</div>
+      <h1 class="display">GTA 6 on PC gets ray-traced lighting</h1>
+      <div class="byline"><span>By <a href="../../about/">GTA6 PC Editorial</a></span><span>Published <time datetime="2026-11-26">November 26, 2026</time></span></div>
+      <p class="lede">The race to run GTA 6 on PC passed two milestones overnight. DexNom, the AMD fork of VIctory that leads the PortWatch tracker, was renamed DexNom RayTime with a profile that renders the game at 1440p with ray tracing switched on. And a combined fork called VIctory-7900XTX reports 13 to 22 frames per second in most scenes, the fastest public numbers yet. Neither build is playable, and the fastest numbers come from single machines that nobody else has reproduced, but the picture on screen is now close to the console game.</p>
+    </header>
+    <figure class="hero-img"><img src="../../assets/blog/gta-6-pc-port-ray-tracing-dexnom.jpg" alt="GTA 6 PC port poster showing ray-traced lighting at 1 fps and forks reaching 13 to 22 fps" width="1600" height="900" onerror="this.closest('figure').remove()"><figcaption>Graphic: GTA6 PC</figcaption></figure>
+    <div class="tldr"><strong class="t">Short answer</strong>DexNom RayTime runs GTA 6 with experimental ray-traced lighting at about <strong>1 fps</strong>, and 3.5 to 4 fps with ray tracing off, on a Radeon RX 7900 XTX. A combined fork, VIctory-7900XTX, reports <strong>13 to 22 fps</strong> in most scenes at 1440p. PortWatch rates DexNom first at <strong>78%</strong>. Nothing is playable yet, and the fastest claims are unreproduced single-machine tests.</div>
+    <div class="prose">
+      
+<h2>What changed overnight</h2>
+<p>DexNom Runtime, the AMD fork of VIctory that TweakTown reported leading the PortWatch tracker at 78 percent, renamed itself DexNom RayTime in a README update at 00:48 UTC on November 26, 2026. The rename marks what the project calls its most complete tested build: a profile that renders at 1440p with ray tracing on and upscales to 4K on a Radeon RX 7900 XTX. Its test report, unchanged since November 25, gives 3.5 to 4 frames per second indoors in the city with ray tracing off, and about 1 frame per second with the experimental ray tracing switched on. PortWatch, which reports having seen the build running with ray-traced lighting working, says the open world looks close to the retail game, with missions played at about 3 to 4 frames per second.</p>
+<p>TweakTown confirms the leaderboard behind the rename. DexNom sits at 78 percent on PortWatch, a hair ahead of Belobug's AMD fork at 77.7 percent, and PortWatch has verified both. DexNom has an experimental ray tracing mode you have to switch on yourself, and both builds look a lot like the retail game in the open world and can get through missions. The catch, as TweakTown puts it, is that they are still running at around 3 to 5 fps.</p>
+<p>Our <a href="../gta-6-pc-port-in-game-rendering/">in-game rendering report</a> covered the step before this one, when VIctory first rendered the game world at about 1 fps, and our <a href="../gta-6-pc-port-race-victory-xcl/">port race report</a> covers VIctory, XCL and the other projects chasing it.</p>
+
+<h2>Why ray tracing matters</h2>
+<p>Ray tracing is the missing piece that has made every GTA 6 PC clip look wrong so far. The original VIctory renders the world lit and textured but without ray-traced shadows or indirect light, and the earliest forks showed every shadowed area as flat black. GTA 6 on console uses ray-traced lighting throughout Leonida, so a port without it can show the right shapes and the wrong light at the same time.</p>
+<p>DexNom is the first public fork to report the game's ray tracing actually running on PC, even at about 1 frame per second. That matters more than the frame rate suggests. It proves the console game's ray-tracing code paths can execute through a compatibility layer on a PC graphics card at all, which was not a given when the race started on November 23. The cost is steep: turning the mode on drops the build from 3.5 to 4 fps to about 1 fps, and the lighting on individual objects is not yet verified, according to the project's own test report.</p>
+
+<h2>The fastest forks, ranked by reported speed</h2>
+<p>The leaderboard changed overnight because the forks started combining each other's work. VIctory-7900XTX, published on November 25, pulls together victory-fork, DexNom and Belobug, tuned on a Radeon RX 7900 XTX. Here is where the leading public builds reportedly stand as of November 26, using the live race tracker that reads each project's own README every 15 minutes.</p>
+<div class="table-wrap"><table>
+<tr><th>Project</th><th>Reported speed</th><th>Hardware</th><th>Session</th></tr>
+<tr><td>VIctory-7900XTX</td><td>13 to 22 fps in most scenes, 6 to 10 in street chases</td><td>RX 7900 XTX, 1440p</td><td>41 minutes, no crash</td></tr>
+<tr><td>AnyXboxX (Neptune)</td><td>14 to 17 fps, median 13.7</td><td>RTX 4070 SUPER</td><td>13-minute runs, no crash</td></tr>
+<tr><td>Kelvaroq</td><td>10 fps average</td><td>RTX 4090, 1440p</td><td>36 minutes, one tester</td></tr>
+<tr><td>victory-fork</td><td>9 to 12 fps in light views, 5 to 6 in heavy ones</td><td>RTX 4070</td><td>Up to 49 minutes, then the card is lost</td></tr>
+<tr><td>Belobug</td><td>5 to 8 fps</td><td>RX 9070 XT</td><td>15-minute drive</td></tr>
+<tr><td>klbf-lab</td><td>5.2 fps average over 77 minutes</td><td>RX 9070 XT</td><td>77 minutes, ended by choice</td></tr>
+<tr><td>DexNom RayTime</td><td>3.5 to 4 fps, about 1 with ray tracing</td><td>RX 7900 XTX, 1440p</td><td>No session length reported</td></tr>
+<tr><td>VIctory (original)</td><td>About 1 fps in the world</td><td>RX 6700 XT</td><td>6 to 8 minutes</td></tr>
+</table></div>
+<p>The table hides as much as it shows. VIctory-7900XTX also reports flicker on trees and far buildings, rooms that are too dark, textures that arrive late, and 40 to 46 GB of memory in use. AnyXboxX dips to 1 to 6 fps while the world streams in, and says a 32 GB machine is short of memory. Kelvaroq's 10 fps average comes from one session by a tester the project does not name. Belobug cut heavy-scene GPU time from about 225 ms to about 80 ms per frame, which is real progress, but it still runs at 5 to 8 fps.</p>
+
+<h2>The 25 fps claim nobody can check</h2>
+<p>Above the public table sits a private build. PortWatch updated its entry for CGBJ at 03:58 UTC on November 26, saying it has now seen the private build and reporting an average of 25 frames per second in gameplay on an NVIDIA card with 16 GB of video memory, with interiors and cutscenes near 30 fps and a picture close to the console game with minor glitches. PortWatch has since called the figure "not a typo".</p>
+<p>Treat it as a claim, not a result. CGBJ's code is not public, so nobody outside the group can test it. PortWatch gives no session length, does not say whether every frame is rendered, and notes that the graphics degraded as the speed improved before the rating was raised. TweakTown also lists a private build called Doomsday scoring slightly higher than the public leaders, with the same problem: its code is not public either. A private number with no code behind it cannot be reproduced, and reproduction is the only thing that separates a breakthrough from a video.</p>
+
+<h2>What the numbers do not prove</h2>
+<p>Every figure in this race comes from a project's own README, measured on one machine, and the tracker that collects them says so on every row. PortWatch's verification means the tracker's owner says it has seen the build running, not that an independent lab tested it. The tracker itself notes that nobody else has reproduced VIctory-7900XTX, and that its speed work pushed at 03:36 UTC on November 26 has not changed the README's figures.</p>
+<p>The gap between the fastest numbers and a playable game is also wider than the fps column suggests. The tracker's playable bar is 20 frames per second with 30 minutes without a crash, and only the combined forks are near the speed half of that bar. Stability is the harder half: victory-fork still loses the graphics device 30 to 50 minutes into a session, and the original VIctory lasts 6 to 8 minutes in the world. The tracker estimates about half a day to playable, but that is the tracker's own estimate, not a schedule, and it assumes the current pace holds.</p>
+<p>None of this changes the legal position either. Every one of these projects runs the leaked Xbox build, which is why Take-Two disabled the Leonida network on November 24. Our <a href="../gta-6-pc-port-november-25-update/">November 25 update</a> has the full story on that takedown.</p>
+
+<h2>What to watch next</h2>
+<p>Watch for a second machine reproducing the 13 to 22 fps figures, which would turn VIctory-7900XTX from a claim into a baseline. Watch for ray tracing appearing in a second public fork, which would show DexNom's work is spreading rather than sitting in one project. And watch for a 30-minute session at 20 fps, the tracker's playable bar, which is the first number that would mean someone actually played the game rather than watched it run.</p>
+<p>Until then, the honest summary is the one the tracker prints at the top of its page: playable, no. The picture is now close to the console game, the speed is climbing fast, and the fastest numbers still belong to single machines running leaked files that nobody can legally download.</p>
+<div class="warn"><strong>Do not download anything claiming to be GTA 6 for PC.</strong> There is no legitimate download, and fake installers using the leak as bait are already circulating. The unofficial port projects are open-source code on GitHub, not game downloads, and they need leaked files to run.</div>
+
+<h2>Quick answers</h2>
+<h3>Does GTA 6 on PC have ray tracing now?</h3>
+<p>Experimentally, yes, in one fork. DexNom RayTime runs the game's ray tracing as an experimental mode on a Radeon RX 7900 XTX, at about 1 frame per second. With ray tracing off it reports 3.5 to 4 fps. PortWatch says it has seen the ray-traced lighting working.</p>
+<h3>Which GTA 6 PC port fork is fastest?</h3>
+<p>By reported numbers, VIctory-7900XTX, which claims 13 to 22 fps in most scenes at 1440p on a Radeon RX 7900 XTX. The claim comes from its own README, PortWatch says its owner verified an average of about 16 fps, and nobody else has reproduced it.</p>
+<h3>What is DexNom RayTime?</h3>
+<p>DexNom RayTime is an AMD-focused fork of the VIctory compatibility layer, built on the victory-world-runtime base. It was called DexNom Runtime until November 26, 2026, when its README renamed it. PortWatch rates it first at 78 percent.</p>
+<h3>What frame rate does the private CGBJ build claim?</h3>
+<p>PortWatch reported on November 26 that CGBJ averages 25 fps in gameplay on an NVIDIA card with 16 GB of video memory, with interiors and cutscenes near 30 fps. The build is private, its code is not public, and no session length was given, so the claim is unverified.</p>
+<h3>Can I play GTA 6 on PC now?</h3>
+<p>No. No project has a verified playable build. The fastest public forks run at 13 to 22 fps in light scenes and much less in busy ones, with flicker, missing textures and crashes, and they need the leaked Xbox build to run at all.</p>
+
+      <!-- Google AdSense: in-article ad unit can go here -->
+      <p class="updated">Last updated <time datetime="2026-11-26">November 26, 2026</time>. We update this page when Rockstar announces anything new.</p>
+      <div class="sources"><h2>Sources</h2><ul><li><a href="https://www.tweaktown.com/articles/11693/the-state-of-gta-6-on-pc-everything-you-need-to-know/index.html" rel="noopener" target="_blank">TweakTown: The state of GTA 6 on PC, everything you need to know</a></li><li><a href="https://vuyp.github.io/gta6-pc-race/" rel="noopener" target="_blank">GTA VI PC Race: live tracker of unofficial PC ports</a></li><li><a href="https://www.youtube.com/watch?v=N7Rlo7CN2rw" rel="noopener" target="_blank">YouTube: GTA 6 Is Running 38x Faster on PC Overnight</a></li></ul></div>
+      <div class="share"><span>Share</span><a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fgta6pc.buzz%2Fblog%2Fgta-6-pc-port-ray-tracing-dexnom%2F&text=GTA%206%20on%20PC%20Gets%20Ray-Traced%20Lighting%3A%20DexNom%2C%20Belobug%20and%20the%2013%20FPS%20Forks" target="_blank" rel="noopener nofollow">X</a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgta6pc.buzz%2Fblog%2Fgta-6-pc-port-ray-tracing-dexnom%2F" target="_blank" rel="noopener nofollow">Facebook</a><a href="https://api.whatsapp.com/send?text=GTA%206%20on%20PC%20Gets%20Ray-Traced%20Lighting%3A%20DexNom%2C%20Belobug%20and%20the%2013%20FPS%20Forks%20https%3A%2F%2Fgta6pc.buzz%2Fblog%2Fgta-6-pc-port-ray-tracing-dexnom%2F" target="_blank" rel="noopener nofollow">WhatsApp</a><a href="https://www.reddit.com/submit?url=https%3A%2F%2Fgta6pc.buzz%2Fblog%2Fgta-6-pc-port-ray-tracing-dexnom%2F&title=GTA%206%20on%20PC%20Gets%20Ray-Traced%20Lighting%3A%20DexNom%2C%20Belobug%20and%20the%2013%20FPS%20Forks" target="_blank" rel="noopener nofollow">Reddit</a></div>
+    </div>
+  </article>
+</div>
+<div class="wrap related"><h2>More GTA 6 PC news</h2><div class="grid" style="padding-bottom:0"><a class="card" href="../../blog/gta-6-pc-port-race-victory-xcl/">
+  <div class="thumb"><img src="../../assets/blog/gta-6-pc-port-race-victory-xcl.jpg" alt="" loading="lazy" onerror="this.remove()"><span>VIctory vs XCL port race</span></div>
+  <div class="body"><div class="meta">PC ports · November 26, 2026</div><h2>GTA 6 PC Port Race, November 25: Walking Around In-Game at About 3fps</h2><p>Forks of the VIctory project now let a player walk around inside GTA 6 on PC, at about 3 frames per second with black shadows. Here is where VIctory, XCL and the other port projects stand on November 25, and why nothing is playable yet.</p></div>
+</a><a class="card" href="../../blog/gta-6-pc-port-in-game-rendering/">
+  <div class="thumb"><img src="../../assets/blog/gta-6-pc-port-in-game-rendering.jpg" alt="" loading="lazy" onerror="this.remove()"><span>In-game on PC</span></div>
+  <div class="body"><div class="meta">PC ports · November 26, 2026</div><h2>GTA 6 Reaches In-Game Rendering on PC, a Day After the Xbox Executable Leak</h2><p>One day after the missing GTA 6 Xbox executable leaked, the unofficial PC port projects moved past the menus. VIctory now renders in-game graphics, and a private build called CGBJ reportedly lets a player move and talk to NPCs. Nothing is playable yet.</p></div>
+</a><a class="card" href="../../blog/gta-6-pc-port-november-25-update/">
+  <div class="thumb"><img src="../../assets/blog/gta-6-pc-port-november-25-update.jpg" alt="" loading="lazy" onerror="this.remove()"><span>Forks race on</span></div>
+  <div class="body"><div class="meta">PC ports · November 26, 2026</div><h2>GTA 6 PC Port Update, Nov 25: Forks Hit 12 FPS as Take-Two Takes Down 3,007 Repos</h2><p>One day after in-game rendering, GTA 6 PC forks report 5 to 12 fps and a 77-minute play session. Take-Two answered with a DMCA takedown of the Leonida network, 3,007 repositories in total.</p></div>
+</a></div></div>
+</main>
+<footer><div class="wrap">
+  <div class="foot-top">
+    <div><a href="../../" class="logo">GTA6<b>PC</b></a><p>GTA 6 PC news, release info and guides · unofficial fan site</p></div>
+    <div class="foot-links"><a href="../../blog/">Blog</a><a href="../../blog/topic/">Topics</a><a href="../../about/">About</a><a href="../../contact/">Contact</a><a href="../../privacy-policy/">Privacy</a><a href="../../terms/">Terms</a><a href="../../disclaimer/">Disclaimer</a><a href="../../feed.xml">RSS</a></div>
+  </div>
+  <p class="legal">GTA6 PC is an unofficial fan site. It is not affiliated with, endorsed by or sponsored by Rockstar Games or Take-Two Interactive. Grand Theft Auto and related marks are trademarks of Take-Two Interactive Software, Inc. Artwork credited to Rockstar Games is used for news reporting and commentary.</p>
+</div></footer>
+</body>
+</html>
