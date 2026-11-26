@@ -69,6 +69,7 @@ def head(title, desc, path, depth, og_image=None, og_type="website", extra_ld=No
 POSTS = [
 dict(
 slug="gta-6-pc-release-date",
+updated="2026-11-26",
 short="When on PC?",
 title="When Is GTA 6 Coming to PC? Release Date Status (November 2026)",
 h1="When is GTA 6 coming to PC?",
@@ -82,6 +83,18 @@ body="""
 <h2>What Rockstar has officially said</h2>
 <p>Rockstar has only ever announced GTA 6 for PlayStation 5 and Xbox Series X|S. The game went through two delays before it shipped: first from 2025 to May 26, 2026, then to November 19, 2026, when it finally launched on both consoles.</p>
 <p>No PC version, PC store page or PC system requirements have been announced. Until Rockstar posts something on its own site, any exact PC date you see online is a guess.</p>
+
+<h2>Confirmed, reported or rumor? The status at a glance</h2>
+<p>Most GTA 6 PC headlines mix three very different kinds of claim. Here is how each one stands today.</p>
+<div class="table-wrap"><table>
+<tr><th>Claim</th><th>Status</th><th>Who says so</th></tr>
+<tr><td>GTA 6 is out on PS5 and Xbox Series X|S</td><td><strong>Confirmed</strong></td><td>Rockstar (launched November 19, 2026)</td></tr>
+<tr><td>A PC version exists or is planned</td><td><strong>Not confirmed</strong></td><td>Rockstar has never announced one</td></tr>
+<tr><td>PC release in Q1 2027 (January to March)</td><td><strong>Reported</strong></td><td>GamesBeat, citing four unnamed industry sources</td></tr>
+<tr><td>PC version listed in Take-Two's release plan to March 2027</td><td><strong>No</strong></td><td>Take-Two's fiscal 2027 release table lists no PC version</td></tr>
+<tr><td>The leak will speed up the PC release</td><td><strong>Speculation</strong></td><td>Commentary in South Korean media, not a company statement</td></tr>
+<tr><td>You can buy, pre-order or download GTA 6 for PC</td><td><strong>False</strong></td><td>No store sells it. Every "download" is fake (see <a href="../gta-6-pc-download-scams/">our scam guide</a>)</td></tr>
+</table></div>
 
 <h2>The Q1 2027 report</h2>
 <p>On October 13, 2026, GamesBeat reported that Rockstar plans to bring GTA 6 to PC in the first three months of 2027. The outlet cited four industry sources who asked not to be named. Rockstar didn't comment on the report.</p>
@@ -112,6 +125,28 @@ body="""
 <h2>Could the leak bring the PC date forward?</h2>
 <p>South Korean outlets covering the leak have raised the idea. Chosun Biz reported on November 25 that the leaked Xbox build raises the prospect of an unofficial PC version, and that some expect Rockstar to bring the official PC release forward to the first quarter of next year. Aju Press made the same point the same day, noting that an unofficial version could reach PC-heavy markets long before any official release.</p>
 <p>That is speculation, not a report of a decision, and nothing official supports it. Rockstar and Take-Two have said nothing about changing their plans because of the leak. There is an older hint pointing the same way, though. In February 2025, Corsair Gaming chief executive Andrew Paul told investors he expected GTA 6 to arrive in early 2026, when the console game was still targeting autumn 2025. The console launch slipped a year, but Wccftech notes the logic still fits: the industry has expected a fast PC release for a while. VGC's Andy Robinson has also said rising console prices are pressuring Rockstar to get the PC version out earlier than usual. None of that is a date, but it explains why the Q1 2027 window keeps coming up.</p>
+
+<h2>Every GTA 6 PC signal so far, in order</h2>
+<p>If you only want to know what has changed and when, this is the full timeline of PC-related news we track. We add to it whenever something new happens.</p>
+<div class="table-wrap"><table>
+<tr><th>Date</th><th>What happened</th><th>Weight</th></tr>
+<tr><td>February 2025</td><td>Corsair CEO Andrew Paul tells investors he expects GTA 6 on PC in early 2026, when consoles were still targeting autumn 2025</td><td>Industry hint</td></tr>
+<tr><td>October 13, 2026</td><td>GamesBeat reports Rockstar is aiming for a PC release in Q1 2027, citing four industry sources</td><td>Strongest report</td></tr>
+<tr><td>November 9, 2026</td><td>Take-Two earnings call: Strauss Zelnick says new versions are announced by Rockstar, gives no PC date</td><td>Official, no news</td></tr>
+<tr><td>November 18, 2026</td><td>GamesBeat updates its report and keeps the Q1 2027 window</td><td>Report repeated</td></tr>
+<tr><td>November 19, 2026</td><td>GTA 6 launches on PS5 and Xbox Series X|S. No PC announcement</td><td>Official</td></tr>
+<tr><td>November 25, 2026</td><td>Chosun Biz and Aju Press suggest the leaked Xbox build could push Rockstar to release on PC sooner</td><td>Speculation</td></tr>
+<tr><td>Early February 2027 (expected)</td><td>Take-Two's next earnings call, the next official checkpoint</td><td>Watch this</td></tr>
+</table></div>
+
+<h2>What PC players can do while they wait</h2>
+<p>Waiting for an official PC version doesn't mean you can't plan. Here is what actually works right now:</p>
+<ul>
+<li><strong>Play on your PC screen today.</strong> If you or a friend own a PS5, <a href="../play-gta-6-on-pc-remote-play/">PS Remote Play</a> streams the console version to your PC. Our <a href="../gta-6-remote-play-lag-fix/">lag fix guide</a> covers the common problems.</li>
+<li><strong>Check your hardware early.</strong> Rockstar hasn't published PC requirements, but our <a href="../gta-6-pc-system-requirements/">expected system requirements</a> and <a href="../best-pc-build-for-gta-6/">PC build guide</a> show where the bar is likely to sit.</li>
+<li><strong>Know where it will be sold.</strong> See what is known about <a href="../gta-6-pc-steam/">Steam</a>, <a href="../gta-6-pc-pre-order/">pre-orders</a> and <a href="../gta-6-pc-price/">the likely PC price</a>.</li>
+<li><strong>Think about your progress.</strong> If you start on console now, read our <a href="../gta-6-save-transfer-ps5-xbox-pc/">save transfer explainer</a> first.</li>
+</ul>
 
 <h2>Quick answers</h2>
 <h3>Is GTA 6 on Steam?</h3>
@@ -372,6 +407,23 @@ for _p in POSTS:
 POSTS = POSTS_DAILY_20261126_B2 + POSTS_DAILY_20261126_B1 + POSTS_DAILY_20261125_B5 + POSTS_DAILY_20261125_B3 + POSTS_DAILY_20261125_B2 + POSTS_DAILY_20261125_B1 + POSTS_DAILY_20261124_B5 + POSTS_DAILY_20261124_B4 + POSTS_DAILY_20261124_B3 + POSTS_DAILY_20261124_B2_MUSE + POSTS_DAILY_20261124_B1 + POSTS_DAILY_20261124_B2 + NEW2 + NEW + POSTS + POSTS2 + POSTS4 + POSTS_DAILY_20261123_B2 + POSTS_DAILY_20261123_B3 + POSTS_DAILY_20261123_B4 + POSTS_DAILY_20261123_B5
 BY_SLUG = {q["slug"]: q for q in POSTS}
 
+# Stable per-post dates. A post keeps its first publish date forever; "modified" only
+# moves when a post's content really changes (set updated="YYYY-MM-DD" on the post).
+# New slugs are added here automatically with today's date.
+import datetime
+_DATES_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "post_dates.json")
+POST_DATES = json.load(open(_DATES_FILE)) if os.path.exists(_DATES_FILE) else {}
+for q in POSTS:
+    d = POST_DATES.setdefault(q["slug"], [TODAY, TODAY])
+    if q.get("updated") and q["updated"] > d[1]:
+        d[1] = q["updated"]
+    q["published"], q["modified"] = d
+json.dump(POST_DATES, open(_DATES_FILE, "w"), indent=1, sort_keys=True)
+def human(d):
+    x = datetime.date.fromisoformat(d)
+    return f"{x.strftime('%B')} {x.day}, {x.year}"
+LATEST_MOD = max(q["modified"] for q in POSTS)
+
 TOPICS = [
     ("leaks-and-ports", "Leaks & PC ports", "Cyberleek, the leaked Xbox build, AnyPS5, Leonida, dumps and every unofficial route to GTA 6 on PC.",
      ["leak", "cyberleek", "leonida", "xbox", "dump", "anyps5", "emulator", "ps5-build", "native-build", "built-for-pc", "modders"]),
@@ -414,7 +466,7 @@ def card(p, depth):
     up = "../" * depth
     return f'''<a class="card" href="{up}blog/{p["slug"]}/">
   <div class="thumb"><img src="{up}assets/blog/{p["slug"]}.jpg" alt="" loading="lazy" onerror="this.remove()"><span>{p["short"]}</span></div>
-  <div class="body"><div class="meta">{p["kicker"]} · {TODAY_H}</div><h2>{p["title"]}</h2><p>{p["desc"]}</p></div>
+  <div class="body"><div class="meta">{p["kicker"]} · {human(p["published"])}</div><h2>{p["title"]}</h2><p>{p["desc"]}</p></div>
 </a>'''
 
 def write(path, text):
@@ -429,7 +481,7 @@ for p in POSTS:
         "@context": "https://schema.org", "@type": "NewsArticle",
         "headline": p["title"], "description": p["desc"],
         "image": [f"{SITE}/assets/blog/{p['slug']}.jpg"],
-        "datePublished": TODAY, "dateModified": TODAY,
+        "datePublished": p["published"], "dateModified": p["modified"],
         "author": {"@type": "Organization", "name": AUTHOR, "url": f"{SITE}/about/"},
         "publisher": {"@type": "Organization", "name": NAME, "url": SITE},
         "mainEntityOfPage": url,
@@ -452,7 +504,7 @@ for p in POSTS:
     <header>
       <div class="eyebrow">{p["kicker"]}</div>
       <h1 class="display">{p["h1"]}</h1>
-      <div class="byline"><span>By <a href="../../about/">{AUTHOR}</a></span><span>Published <time datetime="{TODAY}">{TODAY_H}</time></span></div>
+      <div class="byline"><span>By <a href="../../about/">{AUTHOR}</a></span><span>Published <time datetime="{p["published"]}">{human(p["published"])}</time></span>{f'<span>Updated <time datetime="{p["modified"]}">{human(p["modified"])}</time></span>' if p["modified"] != p["published"] else ""}</div>
       <p class="lede">{p["lede"]}</p>
     </header>
     {img_block(p, 2)}
@@ -460,7 +512,7 @@ for p in POSTS:
     <div class="prose">
       {p["body"]}
       <!-- Google AdSense: in-article ad unit can go here -->
-      <p class="updated">Last updated <time datetime="{TODAY}">{TODAY_H}</time>. We update this page when Rockstar announces anything new.</p>
+      <p class="updated">Last updated <time datetime="{p["modified"]}">{human(p["modified"])}</time>. We update this page when Rockstar announces anything new.</p>
       <div class="sources"><h2>Sources</h2><ul>{sources}</ul></div>
       {share_bar(p)}
     </div>
@@ -473,7 +525,7 @@ for p in POSTS:
 
 # blog index
 blog_ld = {"@context": "https://schema.org", "@type": "Blog", "name": f"{NAME} Blog", "url": f"{SITE}/blog/",
-           "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "url": f"{SITE}/blog/{p['slug']}/", "datePublished": TODAY} for p in POSTS]}
+           "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "url": f"{SITE}/blog/{p['slug']}/", "datePublished": p["published"], "dateModified": p["modified"]} for p in POSTS]}
 write("blog/index.html", head("GTA 6 PC News: Release Date, Requirements, Native Builds and Leaks | GTA6 PC Blog",
       "The latest GTA 6 PC news: release date status, the leaked Xbox build, what a native PC version means, and how to avoid fake GTA 6 PC downloads.",
       "blog/", 1, None, "website", [blog_ld]) + nav(1, "blog") + f'''
@@ -569,7 +621,7 @@ write("blog/topic/index.html", head(f"GTA 6 PC Topics | {NAME}", "Browse GTA 6 P
 from email.utils import format_datetime
 import datetime
 _pub = format_datetime(datetime.datetime(2026, 11, 23, 12, 0, tzinfo=datetime.timezone.utc))
-rss_items = "".join(f"""  <item><title>{html.escape(q['title'])}</title><link>{SITE}/blog/{q['slug']}/</link><guid>{SITE}/blog/{q['slug']}/</guid><pubDate>{_pub}</pubDate><description>{html.escape(q['desc'])}</description><enclosure url="{SITE}/assets/blog/{q['slug']}.jpg" type="image/jpeg" length="0"/></item>\n""" for q in POSTS)
+rss_items = "".join(f"""  <item><title>{html.escape(q['title'])}</title><link>{SITE}/blog/{q['slug']}/</link><guid>{SITE}/blog/{q['slug']}/</guid><pubDate>{format_datetime(datetime.datetime.fromisoformat(q["published"] + "T12:00:00+00:00"))}</pubDate><description>{html.escape(q['desc'])}</description><enclosure url="{SITE}/assets/blog/{q['slug']}.jpg" type="image/jpeg" length="0"/></item>\n""" for q in POSTS)
 write("feed.xml", f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
@@ -649,9 +701,9 @@ if a in h:
 urls = ["", "blog/", "blog/topic/"] + [f"blog/topic/{k}/" for k, _, _, _ in TOPICS] + ["about/", "contact/", "privacy-policy/", "terms/", "disclaimer/"]
 def _img(u):
     return f"<image:image><image:loc>{SITE}/{u}</image:loc></image:image>"
-sm_rows = [f"  <url><loc>{SITE}/</loc><lastmod>{TODAY}</lastmod>{_img('assets/og-default.jpg')}</url>\n"]
-sm_rows += [f"  <url><loc>{SITE}/{u}</loc><lastmod>{TODAY}</lastmod></url>\n" for u in urls[1:]]
-sm_rows += [f"  <url><loc>{SITE}/blog/{q['slug']}/</loc><lastmod>{TODAY}</lastmod>{_img('assets/blog/' + q['slug'] + '.jpg')}</url>\n" for q in POSTS]
+sm_rows = [f"  <url><loc>{SITE}/</loc><lastmod>{LATEST_MOD}</lastmod>{_img('assets/og-default.jpg')}</url>\n"]
+sm_rows += [f"  <url><loc>{SITE}/{u}</loc>" + (f"<lastmod>{LATEST_MOD}</lastmod>" if u.startswith("blog/") else "") + "</url>\n" for u in urls[1:]]
+sm_rows += [f"  <url><loc>{SITE}/blog/{q['slug']}/</loc><lastmod>{q['modified']}</lastmod>{_img('assets/blog/' + q['slug'] + '.jpg')}</url>\n" for q in POSTS]
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n' + "".join(sm_rows) + "</urlset>\n"
 write("sitemap.xml", sm)
 write("robots.txt", f"User-agent: *\nAllow: /\nDisallow: /marketing/\nDisallow: /tools/\n\nSitemap: {SITE}/sitemap.xml\n")

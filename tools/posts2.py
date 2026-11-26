@@ -201,6 +201,7 @@ sources=[
 ),
 dict(
 slug="gta-6-pc-download-scams",
+updated="2026-11-26",
 short="Scam warning",
 title="Fake GTA 6 PC Downloads: How to Spot the Scams and Stay Safe",
 h1="Fake GTA 6 PC downloads: how to spot the scams",
@@ -224,6 +225,20 @@ body="""
 <li><strong>Pre-order and beta scams:</strong> phishing pages offering pre-orders, beta access or "early access" to steal payment details and game account logins.</li>
 </ul>
 
+<h2>The newest wave: fake "leaked build" and "PC port" downloads</h2>
+<p>Since a leaked Xbox build of GTA 6 started circulating around the console launch, the scams have changed shape. Instead of a vague "GTA 6 PC free download," fake sites now claim to offer the leaked build itself, a "working PC port" of it, or an emulator that runs it. They borrow names and screenshots from real news coverage to look credible.</p>
+<p>None of these are a safe way to play. A real leaked console build doesn't run on a Windows PC, and the projects trying to change that haven't released anything playable (we track them in our <a href="../gta-6-pc-leak/">PC leak explainer</a> and <a href="../gta-6-pc-emulator/">emulator guide</a>). Anything packaged as a one-click PC download is either fake or malware, and downloading leaked files carries legal risk on top of the security risk, as we explain in <a href="../is-downloading-leaked-gta-6-illegal/">is downloading leaked GTA 6 illegal?</a></p>
+
+<h2>Real vs fake: a quick check</h2>
+<div class="table-wrap"><table>
+<tr><th>Check</th><th>The real PC version (when it comes)</th><th>A scam</th></tr>
+<tr><td>Where you get it</td><td>Rockstar Games Launcher, and likely Steam and Epic</td><td>File hosts, Discord, Telegram, Google Drive, "mirror" sites</td></tr>
+<tr><td>Price</td><td>Full price, paid through the store</td><td>Free, "cracked", or a small "unlock fee"</td></tr>
+<tr><td>Download size</td><td>Downloaded by the launcher, well over 100 GB</td><td>A small installer of a few MB, or a password-protected archive</td></tr>
+<tr><td>What it asks for</td><td>Your store account login, inside the official app</td><td>Turning off antivirus, surveys, phone numbers, "verification" codes</td></tr>
+<tr><td>Proof it works</td><td>An announcement on the Rockstar Newswire</td><td>A short video, often edited GTA V footage</td></tr>
+</table></div>
+
 <h2>How to spot a GTA 6 scam</h2>
 <ol>
 <li><strong>It offers GTA 6 on PC today.</strong> That alone means it's fake.</li>
@@ -233,6 +248,19 @@ body="""
 <li><strong>It asks you to complete surveys</strong> or enter your phone number to "unlock" the download.</li>
 <li><strong>Its only proof is a short video</strong>. One viral "GTA 6 PC port" clip was GTA V footage.</li>
 </ol>
+
+<h2>How to check a file before you open it</h2>
+<p>If you've already downloaded something and haven't run it, stop there and check it first:</p>
+<ol>
+<li><strong>Look at the file type.</strong> Turn on file extensions in Windows Explorer (View, then Show, then File name extensions). A "game" that is a small <code>.exe</code>, <code>.scr</code>, <code>.bat</code> or <code>.lnk</code> file is a red flag.</li>
+<li><strong>Be wary of password-protected archives.</strong> Scammers lock <code>.zip</code> and <code>.rar</code> files with a password so antivirus software can't scan what's inside.</li>
+<li><strong>Scan it on VirusTotal.</strong> Upload the file at virustotal.com before opening it. Even a few detections is enough reason to delete it.</li>
+<li><strong>Check the digital signature.</strong> Right-click the file, open Properties and look for a Digital Signatures tab. Official Rockstar software is signed by Rockstar Games. Unsigned files, or files signed by a random company, are not from Rockstar.</li>
+<li><strong>Don't click past Windows warnings.</strong> If SmartScreen says "Windows protected your PC," that is the warning doing its job. Don't choose "Run anyway."</li>
+</ol>
+
+<h2>Scams that target console players too</h2>
+<p>You don't need a PC to be a target. GTA 6 owners on PS5 and Xbox are seeing "free money" and Shark Card generators, fake giveaways, and messages claiming their Rockstar account needs "verification." All of them are after your login or payment details. Rockstar won't ask for your password over Discord, social media or email, and there is no tool that adds free in-game money.</p>
 
 <h2>If you already downloaded or ran something</h2>
 <ol>
@@ -244,8 +272,13 @@ body="""
 </ol>
 
 <h2>Where the real PC version will be</h2>
-<p>When GTA 6 comes to PC, it'll be sold on Rockstar's own store and launcher, and very likely Steam and the Epic Games Store. Nowhere else. Check our <a href="../gta-6-pc-release-date/">release date page</a> for the latest.</p>
+<p>When GTA 6 comes to PC, it'll be sold on Rockstar's own store and launcher, and very likely Steam and the Epic Games Store. Nowhere else. Check our <a href="../gta-6-pc-release-date/">release date page</a> for the latest, and if you want to play on your PC screen today, the only safe route is <a href="../play-gta-6-on-pc-remote-play/">PS Remote Play from a PS5</a>.</p>
 """,
+faq=[("Is there a real GTA 6 PC download?", "No. Rockstar has not released or announced GTA 6 for PC. Every site offering a GTA 6 PC download, crack, repack or installer is fake, and many spread malware."),
+     ("Is the leaked GTA 6 Xbox build safe to download?", "No. A console build does not run on a Windows PC, and files sold or shared as a playable PC version of the leak are commonly used to spread malware. Downloading leaked files can also carry legal risk."),
+     ("Will my antivirus catch a fake GTA 6 download?", "Not always. Scammers often hide malware in password-protected archives that antivirus software cannot scan. Scan files on VirusTotal before opening them, and never turn off your antivirus to install a game."),
+     ("Where will the real GTA 6 PC version be sold?", "Rockstar sells its PC games through the Rockstar Games Launcher, and its recent PC releases have also been on Steam and the Epic Games Store. No store sells GTA 6 for PC yet."),
+     ("What should I do if I ran a fake GTA 6 installer?", "Disconnect from the internet, run a full antivirus scan, then change your important passwords from a different, clean device and turn on two-factor authentication. Watch your bank statements for charges you don't recognize.")],
 sources=[
 ("McAfee: GTA 6 is here, so are the scams", "https://www.mcafee.com/blogs/mcafee-news/gta-6-meccha-chameleon-gaming-scams-fall-gaming-releases/"),
 ("Malwarebytes: Fake GTA 6 demo sites deliver an infostealer", "https://www.malwarebytes.com/?p=456116"),
